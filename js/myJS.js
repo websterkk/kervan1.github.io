@@ -1,14 +1,6 @@
 // JS Functions For Kervan
 // Kasey Webster - 2017
 
-// Event Listeners
-document.getElementById("about").addEventListener("click",addAbout);
-document.getElementById("support").addEventListener("click",addSupport);
-document.getElementById("blog").addEventListener("click",addBlog);
-document.getElementById("signUp").addEventListener("click",loginWindow);
-document.getElementById("logIn").addEventListener("click",loginWindow);
-document.getElementById("share").addEventListener("click",addShare);
-
 var ddOpen = 0;
 var shopBool = true;
 var doBool = true;
@@ -16,6 +8,24 @@ var learnBool = true;
 var cityName = 'New York City';
 
 var a = '<div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px"><ul class="w3-pagination w3-white w3-border-bottom" style="width:100%;"><li><a href="#" class="tablink" onclick="openCity(event, \'London\')">Register</a></li><li><a href="#" class="tablink" onclick="openCity(event, \'Paris\')">Sign In</a></li></ul><form class="w3-container" action="form.asp"><div class="w3-section"><label><b>Username</b></label><input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required><label><b>Password</b></label><input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required><button class="w3-btn-block w3-green w3-section w3-padding" type="submit">Login</button><input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me</div></form><div class="w3-container w3-border-top w3-padding-16 w3-light-grey"><button onclick="document.getElementById(\'id01\').style.display=\'none\'" type="button" class="w3-btn w3-red">Cancel</button><span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span></div></div>';
+
+function indexListeners() {
+    document.getElementById("about").addEventListener("click", addAbout);
+    document.getElementById("support").addEventListener("click", addSupport);
+    document.getElementById("blog").addEventListener("click", addBlog);
+    getSharedListeners();
+}
+
+function pg1() {
+    getSharedListeners();
+    createHistogram();
+}
+
+function getSharedListeners() {
+    document.getElementById("signUp").addEventListener("click", loginWindow);
+    document.getElementById("logIn").addEventListener("click", loginWindow);
+    document.getElementById("share").addEventListener("click", addShare);
+}
 
 function loginWindow() {
     //document.getElementById('id01').innerHTML = a;
@@ -38,30 +48,30 @@ $(document).ready(function () {
 
 // FILTER FROM ACTIVITY BUTTONS
 function filterActivity(n) {
-    if (n === 0){
+    if (n === 0) {
         // Shopping
         var sh = document.getElementById("shopContainer").style;
-        if (shopBool === true){
+        if (shopBool === true) {
             sh.opacity = "0.5";
             shopBool = false;
         } else {
             sh.opacity = '1';
             shopBool = true;
         }
-    } else if (n === 1){
+    } else if (n === 1) {
         // Doing
         var doi = document.getElementById("doContainer").style;
-        if (doBool === true){
+        if (doBool === true) {
             doi.opacity = "0.5";
             doBool = false;
         } else {
             doi.opacity = '1';
             doBool = true;
         }
-    } else if (n === 2){
+    } else if (n === 2) {
         // Learning
         var lea = document.getElementById("learnContainer").style;
-        if (learnBool === true){
+        if (learnBool === true) {
             lea.opacity = "0.5";
             learnBool = false;
         } else {
@@ -69,7 +79,7 @@ function filterActivity(n) {
             learnBool = true;
         }
     }
-}    
+}
 
 // OPEN DROP DOWN LISTS
 function addDD(n) {
@@ -186,7 +196,7 @@ function plotHistogram(h) {
     var nBlocks = h.length;
     var hTotal = h.reduce(add, 0);
     // Maximum Distribution value
-    var dMax = Math.max.apply(Math,h);
+    var dMax = Math.max.apply(Math, h);
 
     function add(a, b) {
         return a + b;
@@ -211,22 +221,22 @@ function plotHistogram(h) {
     document.getElementById("histogramContainer").innerHTML = divFill;
 }
 
-function addAbout(){
+function addAbout() {
     alert("about page");
 }
 
-function addSupport(){
+function addSupport() {
     alert("support page");
 }
 
-function addBlog(){
+function addBlog() {
     alert("blog page");
 }
 
-function addLogin(){
+function addLogin() {
     alert("blog page");
 }
 
-function addShare(){
+function addShare() {
     alert("share page");
 }
