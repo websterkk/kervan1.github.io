@@ -1,0 +1,571 @@
+/*--Kervan Style Sheet--*/
+
+@media(max-width: 1200px) {
+    html {
+        font-size: 20px
+    }
+}
+
+@media(max-width: 900px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media(max-width: 600px) {
+    html {
+        font-size: 12px
+    }
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.nonLink {
+    cursor: default;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+.bigMargin {
+    
+}
+
+/*------------------------ MAIN PAGE ---------------------------*/
+#titleFont {
+    position: absolute;
+    top: calc(20% - 25px);
+    font-size: 4rem;
+    left: 5%;
+}
+
+#locationName {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+}
+
+#searchButton {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 7%;
+    height: 30px;
+    width: 30px;
+}
+
+#searchButtonIcon {
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 7%;
+    height: 30px;
+    width: 30px;
+    background-image: url(../img/searchIcon2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+#searchButtonIcon:hover {
+    opacity: 0.85;
+}
+
+.searchBar {
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 37px;
+    top: calc(50% - 15px);
+    left: 7%;
+    height: 28.5px;
+    width: calc(86% - 45px);
+    background-color: rgba(255,255,255,0.5);
+    color: rgb(30,30,30);
+    font-size: 18px;
+    max-height: 30px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#xBorder {
+    position: absolute;
+    top: 80%;
+    left: 12%;
+    width: 76%;
+    height: 4px;
+    background-color: cadetblue;
+}
+
+.topLinks {
+    position: absolute;
+    top: 1.5%;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.topSpacer {
+    position: absolute;
+    top: 1.5%;
+    height: 20px;
+    width: 2px;
+    background-color: black;
+}
+
+.bottomLinks {
+    position: absolute;
+    top: calc(82% + 4px);
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.modalBackground {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.modalContent {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 400px;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+.modalInput {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #808080;
+    width: calc(100% - 32px);
+    display: block;
+    padding: 8px 16px 8px 16px;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc!important;
+    margin-bottom: 16px!important;
+}
+
+.modalInput:not(:valid)~.w3-validate {
+    color: forestgreen;
+}
+
+.rememberLogin {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 6px;
+    margin-top: 8px!important;
+}
+
+.rememberLogin:checked+ {
+    color: #009688;
+}
+
+.rememberLogin:disabled+ {
+    color: #aaa;
+}
+
+.modalForm {
+    padding: 0.01em 16px
+}
+
+.modalForm:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.modalInDiv {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important
+}
+
+.modalButton {
+    color: #fff!important;
+    background-color: #4CAF50!important;
+    margin-top: 8px!important;
+    margin-bottom: 8px!important;
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none!important;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%
+}
+
+.modalButton:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.w3-pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0
+}
+
+.w3-pagination li {
+    display: inline
+}
+
+.w3-pagination li a {
+    text-decoration: none;
+    color: #000;
+    float: left;
+    padding: 8px 16px
+}
+
+.w3-pagination li a:hover {
+    background-color: #ccc
+}
+
+.w3-pagination li a {
+    -webkit-transition: background-color .25s, color .15s, box-shadow .25s, opacity 0.25s, filter 0.25s, border 0.15s;
+    transition: background-color .25s, color .15s, box-shadow .15s, opacity .25s, filter .25s, border .15s
+}
+
+.w3-white {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.w3-border-bottom {
+    border-bottom: 1px solid #ccc!important
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+.w3-container:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-border-top {
+    border-top: 1px solid #ccc!important
+}
+
+.w3-padding-16 {
+    padding-top: 8px!important;
+    padding-bottom: 8px!important
+}
+
+.w3-light-grey {
+    color: #000!important;
+    background-color: #f1f1f1!important
+}
+
+.w3-btn {
+    border: none;
+    display: inline-block;
+    outline: 0;
+    padding: 6px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none!important;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: background-color .25s, color .15s, box-shadow .25s, opacity 0.25s, filter 0.25s, border 0.15s;
+    transition: background-color .25s, color .15s, box-shadow .15s, opacity .25s, filter .25s, border .15s;
+}
+
+.w3-btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.w3-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+.w3-red {
+    color: #fff!important;
+    background-color: #f44336!important
+}
+
+.w3-right {
+    float: right!important
+}
+
+.w3-padding {
+    padding: 8px 16px!important
+}
+
+@media (max-width:600px) {
+    .w3-hide-small {
+        display: none!important
+    }
+}
+
+
+/*--------------------------------------------------------------*/
+/*-------------------------- PAGE 1 ----------------------------*/
+/*--------------------------------------------------------------*/
+
+#activityContainer {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    top: 60px;
+    height: 37px;
+    display: block;
+}
+
+.activityItems {
+    height: calc(100% - 7px);
+    width: calc(33.33% - 6px);
+    background-color: #a3bac2;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 7px;
+}
+
+.activityItems:hover {
+    background-color: #7598a3;
+}
+
+.rightMarginLarge {
+    margin-right: 9px;
+}
+
+#mainContainer {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    top: 104px;
+    height: calc(100% - 114px);
+}
+
+#selectContainer {
+    position: relative;
+    height: 100%;
+    width: calc(33.33% - 6px);
+    margin-right: 3px;
+    float: left;
+    display: inline-block;
+}
+
+.ddTitle {
+    margin-bottom: 4px;
+    width: 100%;
+    height: 26px;
+    background-color: #cccccc;
+}
+
+.ddTitle:hover {
+    background-color: #a6a6a6;
+}
+
+#ddTitle1 {
+    top: 0px;
+}
+
+#ddTitle2 {
+    top: 30px;
+}
+
+#ddTitle3 {
+    top: 60px;
+}
+
+#ddTitle4 {
+    top: 90px;
+}
+
+#ddTitle5 {
+    top: 120px;
+}
+
+.ddContainer {
+    width: 90%;
+    background-color: darkblue;
+    display: none;
+    z-index: 2;
+}
+
+#dd1 {
+    top: 30px;
+}
+
+#dd2 {
+    top: 60px;
+}
+
+#dd3 {
+    top: 90px;
+}
+
+#dd4 {
+    top: 120px;
+}
+
+#dd5 {
+    top: 150px;
+    height: 175px;
+}
+
+.checkBoxItem {
+    
+}
+
+#filteredContainer {
+    top: 150px;
+    height: calc(100% - 150px);
+    width: calc(100% + 6px);
+    margin-left: -6px;
+    overflow-y: auto;
+}
+
+.filteredItem {
+    height: 100px;
+    background-color: red;
+}
+
+.halfDiv {
+    width: calc(50% - 6px);
+    margin: 3px 0px 3px 6px;
+    display: inline-block;
+    float: left;
+}
+
+#mapContainer {
+    height: 100%;
+    width: calc(66.66% - 3px);
+    margin: 0;
+    background-color: green;
+    float: right;
+    display: inline-block
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.listDD:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/*-- PRICE RANGE SLIDER --*/
+.ui-slider-range {
+    background: #007fff;
+    height: 100%;
+} 
+
+.ui-slider-horizontal {
+    position: absolute;
+    top: 130px;
+    height: 6px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.ui-slider .ui-slider-handle {
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+} 
+
+.ui-widget-content .ui-state-active {
+    border: 1px solid #0073e6;
+    background: #007fff;
+} 
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -3px;
+    margin-left: -5px;
+} 
+
+#histogramContainer {
+    position: absolute;
+    top: 40px;
+    height: 80px;
+    width: 90%;
+    margin-left: 5%;
+    border-bottom: 1px solid black;
+    background-color: aliceblue;
+} 
+
+.histo {
+    position: absolute;
+    bottom: 0px;
+    background-color: red;
+    float: left;
+    display: block;
+    margin-left: 5px;
+} 
+
+.histoBack {
+    display: inline-block;
+    height: 100%;
+    float: left;
+}
