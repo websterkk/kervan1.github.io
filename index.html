@@ -1,4 +1,68 @@
+<!DOCTYPE html>
 <html>
-testing
+<title>Kervan</title>
+
+<head>    
+    <link rel="icon" href="./img/globe.jpg">
+    <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style type="text/css">
+        body {
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL LOGIN POPUP -->
+    <div id="id01" class="modalBackground">
+        <div class="modalContent" style="max-width:600px">
+            <ul class="w3-pagination w3-white w3-border-bottom" style="width:100%;">
+                <li><a href="#" class="tablink" onclick="openCity(event, 'London')">Register</a></li>
+                <li><a href="#" class="tablink" onclick="openCity(event, 'Paris')">Sign In</a></li>
+            </ul>
+            <form class="modalForm" action="form.asp">
+                <div class="modalInDiv">
+                    <label><b>Username</b></label>
+                    <input class="modalInput" type="text" placeholder="Enter Username" name="usrname" required>
+                    <label><b>Password</b></label>
+                    <input class="modalInput" type="password" placeholder="Enter Password" name="psw" required>
+                    <button class="modalButton" type="submit">Login</button>
+                    <input class="rememberLogin" type="checkbox" checked="checked"> Remember me
+                </div>
+            </form>
+            <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+            </div>
+        </div>
+    </div>
+    <!-- INDEX PAGE -->
+    <div id="signUp" class="topLinks" style="right:30px"><b>Sign Up</b></div>
+    <div id="logIn" class="topLinks" style="right:130px"><b>Login</b></div>
+    <div id="share" class="topLinks" style="right:230px"><b>Share</b></div>
+    <div class="topSpacer" style="right:220px"></div>
+    <div class="topSpacer" style="right:120px"></div>
+    <div id="titleFont">
+        kervan
+    </div>
+    <form>
+        <input id="locSearch" class="searchBar" type="text" name="location" value="Where are you going?" onfocus="if(this.value=='Where are you going?'){this.value=''};" onblur="if(this.value==''){this.value='Where are you going?';}">
+        <input id="searchButtonIcon" type="submit" value="" style="display:none">
+    </form>
+    <a id="searchButtonIcon" href="pg1.html"></a>
+    <div  id="xBorder"></div>
+    <div id="about" class="bottomLinks" style="left:20%"><b>About</b></div>
+    <div id="support" class="bottomLinks" style="left:45%"><b>Support</b></div>
+    <div id="blog" class="bottomLinks" style="right:20%"><b>Blog</b></div>
+    <!-- LOAD EXTERNAL JS SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/myJS.js"></script>
+</body>
 
 </html>
