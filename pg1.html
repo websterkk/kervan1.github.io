@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>Location Page</title>
+
+<head>
+    <link rel="icon" href="./img/globe.jpg">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
+</head>
+
+<body onclick="createHistogram();">
+    <div onclick="loginWindow(document);" class="topLinks" style="right:30px"><b>Sign Up</b></div>
+    <a href="http://www.google.com" class="topLinks" style="right:130px"><b>Login</b></a>
+    <a class="topLinks" style="right:230px"><b>Share</b></a>
+    <div class="topSpacer" style="right:220px"></div>
+    <div class="topSpacer" style="right:120px"></div>
+    <div id="locationName">
+        New York City
+    </div>
+    <div id="activityContainer">
+        <div id="shopContainer" class="activityItems rightMarginLarge link" onclick="filterActivity(0);">SHOP</div>
+        <div id="doContainer" class="activityItems rightMarginLarge link" onclick="filterActivity(1);">DO</div>
+        <div id="learnContainer" class="activityItems link" onclick="filterActivity(2);">LEARN</div>
+    </div>
+    <div id="mainContainer">
+        <div id="selectContainer">
+            <div id="ddTitle1" class="ddTitle abs link" onClick="addDD(1);">Goods</div>
+            <div id="dd1" class="ddContainer abs">
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+            </div>
+            <div id="ddTitle2" class="ddTitle abs link" onClick="addDD(2);">Materials</div>
+            <div id="dd2" class="ddContainer abs">
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+            </div>
+            <div id="ddTitle3" class="ddTitle abs link" onClick="addDD(3);">Cause</div>
+            <div id="dd3" class="ddContainer abs">
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+            </div>
+            <div id="ddTitle4" class="ddTitle abs link" onClick="addDD(4);">Sourcing</div>
+            <div id="dd4" class="ddContainer abs">
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+                <div class="halfDiv"><input type="checkbox"> Test thing</div>
+            </div>
+            <div id="ddTitle5" class="ddTitle abs link" onClick="addDD(5);">Price Range</div>
+            <div id="dd5" class="ddContainer abs">
+                <p>
+                    <label for="amount">Price range:</label>
+                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:30%">
+                </p>
+                <div id="histogramContainer"></div>
+                <div id="slider-range"></div>
+            </div>
+            <div id="filteredContainer" class="abs">
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv"></div>
+            </div>
+        </div>
+        <div id="mapContainer"></div>
+    </div>
+    <!-- LOAD EXTERNAL JS SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/myJS.js"></script>
+</body>
+
+</html>
