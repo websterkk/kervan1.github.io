@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
 </head>
 
-<body onclick="pg1();">
+<body onload="pg1();">
     <!-- INDEX PAGE -->
     <div id="signUp" class="topLinks" style="right:30px"><b>Sign Up</b></div>
     <div id="logIn" class="topLinks" style="right:130px"><b>Login</b></div>
@@ -18,78 +18,138 @@
     <div id="locationName">
         New York City
     </div>
+    
     <div id="activityContainer">
-        <div id="shopContainer" class="activityItems rightMarginLarge link" onclick="filterActivity(0);">SHOP</div>
-        <div id="doContainer" class="activityItems rightMarginLarge link" onclick="filterActivity(1);">DO</div>
-        <div id="learnContainer" class="activityItems link" onclick="filterActivity(2);">LEARN</div>
+        <div id="menu1" class="filterMenu rightMarginLarge link" onclick="addDD(1);">Products</div>
+        <div id="menu2" class="filterMenu rightMarginLarge link" onclick="addDD(2);">Green</space></div>
+        <div id="menu3" class="filterMenu rightMarginLarge link" onclick="addDD(3);">For A Cause</div>
+        <div id="menu4" class="filterMenu link" onclick="addDD(4);">Local</div>
+        <div id="dd1" class="ddContainer abs">
+            Accessories<br>
+            Art<br>
+            <input type="checkbox"> Ceramic<br>
+            <input type="checkbox"> Glass<br>
+        </div>
+        <div id="dd2" class="ddContainer abs">
+            <button class="accordion">Section 1</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div> 
+        </div>
+        <div id="dd3" class="ddContainer abs">
+            <button class="accordion">Section 1</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+        </div>
+        <div id="dd4" class="ddContainer abs">
+            <button class="accordion">Section 1</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 2</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+
+            <button class="accordion">Section 3</button>
+            <div class="accordianPanel">
+            <p>Lorem ipsum...</p>
+            </div>
+        </div>        
     </div>
     <div id="mainContainer">
         <div id="selectContainer">
-            <div id="ddTitle1" class="ddTitle abs link" onClick="addDD(1);">Goods</div>
-            <div id="dd1" class="ddContainer abs">
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-            </div>
-            <div id="ddTitle2" class="ddTitle abs link" onClick="addDD(2);">Materials</div>
-            <div id="dd2" class="ddContainer abs">
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-            </div>
-            <div id="ddTitle3" class="ddTitle abs link" onClick="addDD(3);">Cause</div>
-            <div id="dd3" class="ddContainer abs">
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-            </div>
-            <div id="ddTitle4" class="ddTitle abs link" onClick="addDD(4);">Sourcing</div>
-            <div id="dd4" class="ddContainer abs">
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-                <div class="halfDiv"><input type="checkbox"> Test thing</div>
-            </div>
-            <div id="ddTitle5" class="ddTitle abs link" onClick="addDD(5);">Price Range</div>
-            <div id="dd5" class="ddContainer abs">
-                <p>
-                    <label for="amount">Price range:</label>
-                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:30%">
-                </p>
-                <div id="histogramContainer"></div>
-                <div id="slider-range"></div>
-            </div>
             <div id="filteredContainer" class="abs">
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
-                <div class="filteredItem halfDiv"></div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
+                <div class="filteredItem halfDiv">
+                    <div class="filteredImage"></div>
+                    <div class="filteredName"></div>
+                </div>
             </div>
         </div>
-        <div id="mapContainer"></div>
+        <div id="popupContainer"></div>
+        <div id="mapContainer" class="right"></div>
     </div>
     <!-- LOAD EXTERNAL JS SCRIPTS -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -98,3 +158,14 @@
 </body>
 
 </html>
+
+<!-- 
+    <div id="dd5" class="ddContainer abs">
+        <p>
+            <label for="amount">Price range:</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:30%">
+        </p>
+        <div id="histogramContainer"></div>
+        <div id="slider-range"></div>
+    </div
+-->
