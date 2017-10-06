@@ -21,23 +21,26 @@
     <!-- MODAL LOGIN POPUP -->
     <div id="id01" class="modalBackground">
         <div class="modalContent" style="max-width:600px">
-            <ul class="w3-pagination w3-white w3-border-bottom" style="width:100%;">
-                <li><a href="#" class="tablink" onclick="openCity(event, 'London')">Register</a></li>
-                <li><a href="#" class="tablink" onclick="openCity(event, 'Paris')">Sign In</a></li>
-            </ul>
+            <div class="loginTabsContainer">
+                <div id="register" class="loginTab link" onclick="showRegister();">Register</div>
+                <div id="signIn" class="loginTab link" onclick="hideRegister();">Sign In</div>
+            </div>
             <form class="modalForm" action="form.asp">
                 <div class="modalInDiv">
                     <label><b>Username</b></label>
                     <input class="modalInput" type="text" placeholder="Enter Username" name="usrname" required>
                     <label><b>Password</b></label>
                     <input class="modalInput" type="password" placeholder="Enter Password" name="psw" required>
+                    <label id="regOnly1"><b>Confirm Password</b></label>
+                    <input id="regOnly2" class="modalInput" type="password" placeholder="Enter Password" name="psw" required>
                     <button class="modalButton" type="submit">Login</button>
                     <input class="rememberLogin" type="checkbox" checked="checked"> Remember me
                 </div>
             </form>
             <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
-                <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
-                <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+                <button onclick="closeLogin();" type="button" class="btn link" style="color:#fff; background-color:#f44336">Cancel</button>
+                <button type="button" class="btn right link" style="background-color:#2196F3">Forgot Password?</button>
+                
             </div>
         </div>
     </div>
