@@ -18,6 +18,7 @@
     }
 }
 
+
 body {
     height: 100%;
     width: 100%;
@@ -165,8 +166,6 @@ a {
     padding: 0;
     outline: 0;
     width: 400px;
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
 }
 
 .modalInput {
@@ -241,39 +240,25 @@ a {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
-.w3-pagination {
+.loginTab {
     display: inline-block;
-    padding: 0;
-    margin: 0
+    padding: 15px;
+    width: calc(50% - 32px);
+    text-align: center;
 }
 
-.w3-pagination li {
-    display: inline
+.loginTab:hover {
+    background-color: #f9f9f9;
 }
 
-.w3-pagination li a {
-    text-decoration: none;
-    color: #000;
-    float: left;
-    padding: 8px 16px
+.loginTabSelected {
+    background-color: white;
 }
 
-.w3-pagination li a:hover {
-    background-color: #ccc
-}
-
-.w3-pagination li a {
-    -webkit-transition: background-color .25s, color .15s, box-shadow .25s, opacity 0.25s, filter 0.25s, border 0.15s;
-    transition: background-color .25s, color .15s, box-shadow .15s, opacity .25s, filter .25s, border .15s
-}
-
-.w3-white {
-    color: #000!important;
-    background-color: #fff!important
-}
-
-.w3-border-bottom {
-    border-bottom: 1px solid #ccc!important
+.loginTabsContainer {
+    display: inline-block;
+    background-color: #ccc;
+    width: 100%;
 }
 
 .w3-container {
@@ -300,7 +285,7 @@ a {
     background-color: #f1f1f1!important
 }
 
-.w3-btn {
+.btn {
     border: none;
     display: inline-block;
     outline: 0;
@@ -308,22 +293,11 @@ a {
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none!important;
-    color: #fff;
-    background-color: #000;
     text-align: center;
-    cursor: pointer;
     white-space: nowrap;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-transition: background-color .25s, color .15s, box-shadow .25s, opacity 0.25s, filter 0.25s, border 0.15s;
-    transition: background-color .25s, color .15s, box-shadow .15s, opacity .25s, filter .25s, border .15s;
 }
 
-.w3-btn:hover {
+.btn:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
@@ -337,7 +311,7 @@ a {
     background-color: #f44336!important
 }
 
-.w3-right {
+.right {
     float: right!important
 }
 
@@ -345,11 +319,7 @@ a {
     padding: 8px 16px!important
 }
 
-@media (max-width:600px) {
-    .w3-hide-small {
-        display: none!important
-    }
-}
+
 
 
 /*--------------------------------------------------------------*/
@@ -365,22 +335,31 @@ a {
     display: block;
 }
 
-.activityItems {
+.colorCoded {
+    padding-top: 10px;
+}
+
+.activityTitle {
+    padding-top:3px;
+}
+
+.filterMenu {
     height: calc(100% - 7px);
-    width: calc(33.33% - 6px);
+    width: calc(25% - 6px);
     background-color: #a3bac2;
     display: inline-block;
     float: left;
     text-align: center;
     padding-top: 7px;
+    border-bottom: 3px black solid;
 }
 
-.activityItems:hover {
+.filterMenu:hover {
     background-color: #7598a3;
 }
 
 .rightMarginLarge {
-    margin-right: 9px;
+    margin-right: 8px;
 }
 
 #mainContainer {
@@ -389,12 +368,14 @@ a {
     width: calc(100% - 20px);
     top: 104px;
     height: calc(100% - 114px);
+    display: inline-block;
+    background-color: paleturquoise;
 }
 
 #selectContainer {
     position: relative;
     height: 100%;
-    width: calc(33.33% - 6px);
+    width: calc(30% - 3px);
     margin-right: 3px;
     float: left;
     display: inline-block;
@@ -432,26 +413,29 @@ a {
 }
 
 .ddContainer {
-    width: 90%;
-    background-color: darkblue;
+    position: absolute;
+    top:37px;
+    width:20%;
+    background-color: white;
     display: none;
     z-index: 2;
+    border: 1px solid black;
 }
 
 #dd1 {
-    top: 30px;
+    left: 0px;
 }
 
 #dd2 {
-    top: 60px;
+    left: 25%;
 }
 
 #dd3 {
-    top: 90px;
+    left: 50%;
 }
 
 #dd4 {
-    top: 120px;
+    left: 75%;
 }
 
 #dd5 {
@@ -459,36 +443,85 @@ a {
     height: 175px;
 }
 
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordianPanel {
+    padding: 0 10px;
+    background-color: white;
+    display: none;
+}
+
 .checkBoxItem {
     
 }
 
 #filteredContainer {
-    top: 150px;
-    height: calc(100% - 150px);
+    top: 0px;
+    height: 100%;
     width: calc(100% + 6px);
     margin-left: -6px;
     overflow-y: auto;
 }
 
 .filteredItem {
-    height: 100px;
+    height: 16vw;
     background-color: red;
 }
 
 .halfDiv {
     width: calc(50% - 6px);
-    margin: 3px 0px 3px 6px;
+    margin: 0px 0px 6px 6px;
     display: inline-block;
     float: left;
 }
 
+.filteredImage {
+    width: 100%;
+    height: 80%;
+    background-color: goldenrod;
+}
+
+.filteredName {
+    width: 100%;
+    height: 20%;
+    background-color: pink;
+}
+
 #mapContainer {
     height: 100%;
-    width: calc(66.66% - 3px);
     margin: 0;
     background-color: green;
-    float: right;
+    display: inline-block
+}
+
+.popupMap {
+    width: calc(45% - 8px);
+}
+
+.nopopupMap {
+    width: 70%;
+}
+
+#popupContainer {
+    height: 100%;
+    width: calc(25% + 0px);
+    margin: 0;
+    background-color: purple;
+    float: left;
     display: inline-block
 }
 
@@ -511,6 +544,134 @@ a {
     text-decoration: none;
     display: block;
 }
+
+
+/*--------------------------------------------------------------*/
+/*-------------------------- PAGE 2 ----------------------------*/
+/*--------------------------------------------------------------*/
+
+.storeMenu {
+    height: calc(100% - 7px);
+    width: calc(16.667% - 6.67px);
+    background-color: #a3bac2;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    padding-top: 7px
+}
+#socialMediaMenu {
+    position: absolute;
+    left: 10px;
+    width: calc(40% - 20px);
+    top: 55px;
+    height: 32px;
+    display: block;
+    background-color: pink;
+    display: inline-block;
+}
+
+.socialItem {
+    width: 32px;
+    margin-right: 3px;
+    background-color: goldenrod;
+    height: 100%;
+    display: inline-block;
+}
+
+#shopActivityContainer {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    top: 95px;
+    height: 37px;
+    display: block;
+    background-color: paleturquoise;
+}
+
+#mainStoreContainer {
+    position: absolute;
+    left: 10px;
+    width: calc(100% - 20px);
+    top: 140px;
+    display: inline-block;
+}
+
+.storeContainerMargin {
+    position: relative;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+}
+#storePhotoContainer {
+    height: 35vh;
+    background-color: red;
+}
+
+#storeOverviewContainer {
+    background-color: magenta;
+}
+
+#storeLocationContainer {
+    background-color: magenta;
+    height: 25vh;
+}
+
+#storeProductsContainer {
+    background-color: magenta;
+    height: 20vh;
+}
+
+#similarShopsContainer {
+    background-color: darkcyan;
+    height: calc(20vh + 20px);
+}
+
+.storeSectionHeader {
+    font-size: 22px;
+    display: inline-block;
+    width: 20%;
+    background-color: blanchedalmond;
+}
+
+.storeSectionContent {
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    background-color: royalblue;
+    float: right;
+}
+
+.similarContainer {
+    width: 100%;
+    height: calc(100% - 30px);
+    background-color:grey
+}
+
+.similarItem {
+    display: inline-block;
+    width: calc(10% - 10px);
+    height: calc(100% - 6px);
+    margin: 3px 3px 3px 3px;
+    background-color: maroon;
+}
+
+.locationAddress {
+    height: 100%;
+    width: 30%;
+    background-color: rebeccapurple;
+    display: inline-block;
+}
+
+.locationMap {
+    height: 100%;
+    width: calc(70% - 10px);
+    float: right;
+    background-color: rosybrown;
+    display: inline-block;
+}
+
+
+
+
 
 /*-- PRICE RANGE SLIDER --*/
 .ui-slider-range {
