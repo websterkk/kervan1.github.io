@@ -1,5 +1,6 @@
 // JS Functions For Kervan
 // Kasey Webster - 2017
+// test with github
 
 var ddOpen = 0;
 var shopBool = true;
