@@ -18,11 +18,12 @@ function indexListeners() {
 
 function pg1() {
     getSharedListeners();
-    createHistogram();
+    //createHistogram();
+    checkForPopup();
 }
 
 function getSharedListeners() {
-    document.getElementById("signUp").addEventListener("click", loginWindow);
+    document.getElementById("signUp").addEventListener("click", registerWindow);
     document.getElementById("logIn").addEventListener("click", loginWindow);
     document.getElementById("share").addEventListener("click", addShare);
 }
@@ -30,6 +31,30 @@ function getSharedListeners() {
 function loginWindow() {
     //document.getElementById('id01').innerHTML = a;
     document.getElementById('id01').style.display = 'block';
+    hideRegister();
+}
+
+function registerWindow() {
+    document.getElementById('id01').style.display = 'block';
+    showRegister();
+}
+
+function showRegister(){
+    document.getElementById('regOnly1').style.display = 'block';
+    document.getElementById('regOnly2').style.display = 'block';
+    document.getElementById('signIn').classList.remove("loginTabSelected");
+    document.getElementById('register').classList.add("loginTabSelected");
+}
+
+function hideRegister() {
+    document.getElementById('regOnly1').style.display = 'none';
+    document.getElementById('regOnly2').style.display = 'none';
+    document.getElementById('register').classList.remove("loginTabSelected");
+    document.getElementById('signIn').classList.add("loginTabSelected");
+}
+
+function closeLogin() {
+    document.getElementById('id01').style.display='none'
 }
 
 $(document).ready(function () {
@@ -46,65 +71,67 @@ $(document).ready(function () {
 
 });
 
-// FILTER FROM ACTIVITY BUTTONS
-function filterActivity(n) {
-    if (n === 0) {
-        // Shopping
-        var sh = document.getElementById("shopContainer").style;
-        if (shopBool === true) {
-            sh.opacity = "0.5";
-            shopBool = false;
-        } else {
-            sh.opacity = '1';
-            shopBool = true;
-        }
-    } else if (n === 1) {
-        // Doing
-        var doi = document.getElementById("doContainer").style;
-        if (doBool === true) {
-            doi.opacity = "0.5";
-            doBool = false;
-        } else {
-            doi.opacity = '1';
-            doBool = true;
-        }
-    } else if (n === 2) {
-        // Learning
-        var lea = document.getElementById("learnContainer").style;
-        if (learnBool === true) {
-            lea.opacity = "0.5";
-            learnBool = false;
-        } else {
-            lea.opacity = '1';
-            learnBool = true;
-        }
-    }
-}
-
 // OPEN DROP DOWN LISTS
 function addDD(n) {
     var ddCurrent = "dd" + n;
     var ddTitleCurr = "ddTitle" + n;
     var ddPast = "dd" + ddOpen;
+    var menuPast = "menu" + ddOpen;
     var ddTitlePrev = "ddTitle" + ddOpen;
+    var menuStyle = document.getElementById("menu" + n).style;
     if (ddOpen === 0) {
         // Open first DropDown List
         document.getElementById(ddCurrent).style.display = "block";
-        document.getElementById(ddTitleCurr).style.backgroundColor = "#a6a6a6";
+        // menuStyle.opacity = "0.3";
+        menuStyle.backgroundColor = "#7598a3";
         ddOpen = n;
     } else if (ddOpen === n) {
         // Close Open DropDown List
         document.getElementById(ddCurrent).style.display = "none";
-        document.getElementById(ddTitleCurr).style.backgroundColor = "#cccccc";
+        //document.getElementById(menuPast).style.opacity = "1";
+        document.getElementById(menuPast).style.backgroundColor = '#a3bac2';        
         ddOpen = 0;
     } else {
+        // Remove Style From Previous Menu
         document.getElementById(ddPast).style.display = "none";
+        //document.getElementById(menuPast).style.opacity = "1";
+        document.getElementById(menuPast).style.backgroundColor = '#a3bac2';
+        // Style Newly Clicked Menu
         document.getElementById(ddCurrent).style.display = "block";
-        document.getElementById(ddTitlePrev).style.backgroundColor = "#cccccc";
-        document.getElementById(ddTitleCurr).style.backgroundColor = "#a6a6a6";
+        //menuStyle.opacity = "0.3";
+        menuStyle.backgroundColor = '#7598a3';
         ddOpen = n;
     }
 }
+
+function checkForPopup() {
+    var popupBool = false;
+    if (popupBool === true) {
+        document.getElementById("popupContainer").style.display = "inline-block";
+        document.getElementById("mapContainer").classList.add("popupMap");
+    } else {
+        document.getElementById("popupContainer").style.display = "none";
+        document.getElementById("mapContainer").classList.add("nopopupMap");
+    }
+}
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+} 
 
 // Load List of Stores
 function loadStores() {
@@ -230,7 +257,8 @@ function addSupport() {
 }
 
 function addBlog() {
-    alert("blog page");
+    //alert("blog page");
+    window.open("https://blog.big4mining.com");
 }
 
 function addLogin() {
