@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Store Page</title>
+
+<head>
+    <link rel="icon" href="./img/globe.jpg">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
+</head>
+
+<body onload="pg1();">
+    <!-- INDEX PAGE -->
+    <div id="signUp" class="topLinks" style="right:30px"><b>Sign Up</b></div>
+    <div id="logIn" class="topLinks" style="right:130px"><b>Login</b></div>
+    <div id="share" class="topLinks" style="right:230px"><b>Share</b></div>
+    <div class="topSpacer" style="right:220px"></div>
+    <div class="topSpacer" style="right:120px"></div>
+    <div id="locationName">
+        Store Page
+    </div>
+    <div id=socialMediaMenu>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+        <div class="socialItem"></div>
+    </div>
+    
+    <div id="shopActivityContainer">
+        <div id="menu1" class="storeMenu rightMarginLarge link" onclick="addDD(1);">Overview</div>
+        <div id="menu1" class="storeMenu rightMarginLarge link" onclick="addDD(1);">Products</div>
+        <div id="menu2" class="storeMenu rightMarginLarge link" onclick="addDD(2);">Location & Hours</space></div>
+        <div id="menu3" class="storeMenu rightMarginLarge link" onclick="addDD(3);">Payment</div>
+        <div id="menu3" class="storeMenu rightMarginLarge link" onclick="addDD(4);">Reviews</div>
+        <div id="menu4" class="storeMenu link" onclick="addDD(5);">Classes/Events</div>
+        <div id="dd1" class="ddContainer abs">
+            Art<br>
+            <input type="checkbox"> Ceramic<br>
+            <input type="checkbox"> Glass<br>
+            <input type="checkbox"> Painting<br>
+            <input type="checkbox"> Sculpture<br>
+            Clothing & Accessories<br>
+        </div>
+        <div id="dd2" class="ddContainer abs">
+            <input type="checkbox"> Ceramic<br>
+            <input type="checkbox"> Glass<br>
+            <input type="checkbox"> Painting<br>
+            <input type="checkbox"> Sculpture<br>
+        </div>
+        <div id="dd3" class="ddContainer abs">
+            <input type="checkbox"> Ceramic<br>
+            <input type="checkbox"> Glass<br>
+            <input type="checkbox"> Painting<br>
+            <input type="checkbox"> Sculpture<br>
+        </div>
+        <div id="dd4" class="ddContainer abs">
+            <input type="checkbox"> Ceramic<br>
+            <input type="checkbox"> Glass<br>
+            <input type="checkbox"> Painting<br>
+            <input type="checkbox"> Sculpture<br>
+        </div>        
+    </div>
+    <div id="mainStoreContainer">
+        <div id="storePhotoContainer" class="storeContainerMargin">Photo Test</div>
+        <div id="storeOverviewContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Overview</div>
+            <div class="storeSectionContent">Brief Description</div>
+            <div class="similarContainer">
+                Brief Description <br>
+                TAGS <br>
+                TAGS
+            </div>
+        </div>
+        <div id="storeProductsContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Products</div>
+            <div class="storeSectionContent">
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+            </div>
+        </div>
+        <div id="storeLocationContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Location</div>
+            <div class="storeSectionContent">
+                <div class="locationAddress">Address</div>
+                <div class="locationMap">Map</div>
+            </div>
+            
+        </div>
+        <div id="storeOverviewContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Hours</div>
+            <div class="storeSectionContent">Brief Description</div>
+        </div>
+        <div id="storeOverviewContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Payment Methods</div>
+            <div class="storeSectionContent">Brief Description</div>
+        </div>
+        <div id="storeOverviewContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Classes</div>
+            <div class="storeSectionContent">Brief Description</div>
+        </div>
+        <div id="storeOverviewContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Review</div>
+            <div class="storeSectionContent">Brief Description</div>
+        </div>
+        <div id="similarShopsContainer" class="storeContainerMargin">
+            <div class="storeSectionHeader">Similar Shops</div>
+            <div class="similarContainer">
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+                <div class="similarItem">1</div>
+            </div>
+        </div>
+    </div>
+    <!-- LOAD EXTERNAL JS SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="./js/myJS.js"></script>
+</body>
+
+</html>
+
+<!-- 
+    <div id="dd5" class="ddContainer abs">
+        <p>
+            <label for="amount">Price range:</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold; width:30%">
+        </p>
+        <div id="histogramContainer"></div>
+        <div id="slider-range"></div>
+    </div
+-->
