@@ -59,13 +59,6 @@ a {
     left: 5%;
 }
 
-#locationName {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 30px;
-}
-
 #searchButton {
     position: absolute;
     top: calc(50% - 15px);
@@ -335,6 +328,41 @@ a {
     display: block;
 }
 
+#locationTitleBar {
+    position: absolute;
+    top: 10px;
+    height:45px;
+    left: 10px;
+    right: 500px;
+    display: block;
+}
+
+#locationName {
+    font-size: 30px;
+    display: inline-block;
+}
+
+#locationPageSearch {
+    position:relative;
+    top:-10px;
+    height:calc(100% - 4px);
+    width:500px;
+    display: inline-block;
+}
+
+.searchBarLoc {
+    position: relative;
+    top: 8px;
+    left: 15px;
+    width: calc(100% - 15px);
+    background-color: rgba(200,200,200,0.5);
+    color: rgb(30,30,30);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 .colorCoded {
     padding-top: 10px;
 }
@@ -457,6 +485,18 @@ button.accordion {
 
 button.accordion.active, button.accordion:hover {
     background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 .accordianPanel {

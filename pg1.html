@@ -15,8 +15,17 @@
     <div id="share" class="topLinks" style="right:230px"><b>Share</b></div>
     <div class="topSpacer" style="right:220px"></div>
     <div class="topSpacer" style="right:120px"></div>
-    <div id="locationName">
-        New York City
+    
+    <div id="locationTitleBar">
+        <div id="locationName">
+            New York City
+        </div>
+
+        <div id="locationPageSearch">
+            <form>
+            <input class="searchBarLoc" type="text" name="location" value="What are you looking for?" onfocus="if(this.value=='What are you looking for?'){this.value=''};" onblur="if(this.value==''){this.value='What are you looking for?';}">
+            </form>
+        </div>
     </div>
     
     <div id="activityContainer">
@@ -25,15 +34,37 @@
         <div id="menu3" class="filterMenu rightMarginLarge link" onclick="addDD(3);">For A Cause</div>
         <div id="menu4" class="filterMenu link" onclick="addDD(4);">Local</div>
         <div id="dd1" class="ddContainer abs">
-            Accessories<br>
-            Art<br>
-            <input type="checkbox"> Ceramic<br>
-            <input type="checkbox"> Glass<br>
+            <button class="accordion">Goods</button>
+            <div class="accordianPanel">
+                <input type="checkbox"> Accessories<br>
+                <input type="checkbox"> Art<br>
+                <input type="checkbox"> Books<br>
+                <input type="checkbox"> Children's Clothing<br>
+                <input type="checkbox"> Furniture<br>
+                <input type="checkbox"> Household<br>
+                <input type="checkbox"> Jewelry<br>
+                <input type="checkbox"> Maker Supplies<br>
+                <input type="checkbox"> Men's Clothing<br>
+                <input type="checkbox"> Music<br>
+                <input type="checkbox"> Rugs<br>
+                <input type="checkbox"> Shoes<br>
+                <input type="checkbox"> Textiles<br>
+                <input type="checkbox"> Toys<br>
+                <input type="checkbox"> Women's Clothing
+            </div>
+
+            <button class="accordion">Materials</button>
+            <div class="accordianPanel">
+                <input type="checkbox"> Cloth<br>
+                <input type="checkbox"> Ceramic<br>
+                <input type="checkbox"> Glass<br>
+                <input type="checkbox"> Leather<br>
+                <input type="checkbox"> Metal<br>
+                <input type="checkbox"> Wood
+            </div>
         </div>
         <div id="dd2" class="ddContainer abs">
-            <input type="checkbox"> Fair Trade USA Certified<br>
-            <input type="checkbox"> Fair Trade International Certified<br>
-            <input type="checkbox"> Locally-Made<br>
+
         </div>
         <div id="dd3" class="ddContainer abs">
             <input type="checkbox"> Animals<br>
@@ -53,21 +84,10 @@
             <input type="checkbox"> Trafficked Persons<br>
             <input type="checkbox"> Women
         </div>
-        <div id="dd4" class="ddContainer abs">
-            <button class="accordion">Section 1</button>
-            <div class="accordianPanel">
-            <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Section 2</button>
-            <div class="accordianPanel">
-            <p>Lorem ipsum...</p>
-            </div>
-
-            <button class="accordion">Section 3</button>
-            <div class="accordianPanel">
-            <p>Lorem ipsum...</p>
-            </div>
+        <div id="dd4" class="ddContainer abs">            
+            <input type="checkbox"> Fair Trade USA Certified<br>
+            <input type="checkbox"> Fair Trade International Certified<br>
+            <input type="checkbox"> Locally-Made<br>
         </div>        
     </div>
     <div id="mainContainer">
@@ -146,6 +166,19 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="./js/myJS.js"></script>
+
+    <script type="text/javascript">
+        function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(40.7, -74.02),
+            zoom: 6,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("mapContainer"), mapOptions);
+        }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUw5XcoBhijjucUbazR2x27JDmVlV7bk&callback=myMap"></script>
 </body>
 
 </html>

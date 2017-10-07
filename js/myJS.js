@@ -117,6 +117,7 @@ function checkForPopup() {
 }
 
 var acc = document.getElementsByClassName("accordion");
+var aP = document.getElementsByClassName("accordionPanel");
 
 for (var i = 0; i < acc.length; i++) {
     acc[i].onclick = function(){
@@ -148,6 +149,8 @@ function displaySelect() {
 
 }
 
+
+/*
 //GET h FROM DATABASE
 var h;
 var sliderMin;
@@ -248,6 +251,8 @@ function plotHistogram(h) {
 
     document.getElementById("histogramContainer").innerHTML = divFill;
 }
+
+*/
 
 function addAbout() {
     alert("about page");
