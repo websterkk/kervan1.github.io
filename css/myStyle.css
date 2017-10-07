@@ -54,14 +54,14 @@ a {
 /*------------------------ MAIN PAGE ---------------------------*/
 #titleFont {
     position: absolute;
-    top: calc(20% - 25px);
+    top: calc(15% - 25px);
     font-size: 4rem;
     left: 5%;
 }
 
 #searchButton {
     position: absolute;
-    top: calc(50% - 15px);
+    top: calc(45% - 15px);
     right: 7%;
     height: 30px;
     width: 30px;
@@ -69,7 +69,7 @@ a {
 
 #searchButtonIcon {
     position: absolute;
-    top: calc(50% - 15px);
+    top: calc(45% - 15px);
     right: 7%;
     height: 30px;
     width: 30px;
@@ -90,7 +90,7 @@ a {
     position: absolute;
     padding-left: 8px;
     padding-right: 37px;
-    top: calc(50% - 15px);
+    top: calc(45% - 15px);
     left: 7%;
     height: 28.5px;
     width: calc(86% - 45px);
@@ -105,11 +105,11 @@ a {
 
 #xBorder {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 12%;
     width: 76%;
     height: 4px;
-    background-color: cadetblue;
+    background-color: black;
 }
 
 .topLinks {
@@ -131,11 +131,29 @@ a {
 
 .bottomLinks {
     position: absolute;
-    top: calc(82% + 4px);
+    top: calc(72% + 4px);
     width: 10%;
     text-align: center;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+#quickLinksDiv {
+    position: absolute;
+    top: calc(80% - 0px);
+    width: 76%;
+    left: 12%;
+    height: 17%;
+    background-color: black;
+}
+
+.quickLinks {
+    width: calc(17vh - 0px);
+    height: calc(100% - 6px);
+    margin-top: 3px;
+    margin-left: 15px;
+    background-color: red;
+    display: inline-block;
 }
 
 .modalBackground {
@@ -209,7 +227,7 @@ a {
     margin-bottom: 16px!important
 }
 
-.modalButton {
+#modalButtonConfirm {
     color: #fff!important;
     background-color: #4CAF50!important;
     margin-top: 8px!important;
@@ -229,7 +247,7 @@ a {
     width: 100%
 }
 
-.modalButton:hover {
+.modalButtonConfirm:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 

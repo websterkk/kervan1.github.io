@@ -45,6 +45,7 @@ function showRegister(){
     document.getElementById('regOnly2').style.display = 'block';
     document.getElementById('signIn').classList.remove("loginTabSelected");
     document.getElementById('register').classList.add("loginTabSelected");
+    document.getElementById('modalButtonConfirm').innerHTML = "Create Account";
 }
 
 function hideRegister() {
@@ -52,6 +53,7 @@ function hideRegister() {
     document.getElementById('regOnly2').style.display = 'none';
     document.getElementById('register').classList.remove("loginTabSelected");
     document.getElementById('signIn').classList.add("loginTabSelected");
+    document.getElementById('modalButtonConfirm').innerHTML = "Login";
 }
 
 function closeLogin() {

@@ -18,6 +18,7 @@
 </head>
 
 <body onload="indexListeners();">
+    <div class="entireBlur"></div>
     <!-- MODAL LOGIN POPUP -->
     <div id="id01" class="modalBackground">
         <div class="modalContent" style="max-width:600px">
@@ -33,14 +34,13 @@
                     <input class="modalInput" type="password" placeholder="Enter Password" name="psw" required>
                     <label id="regOnly1"><b>Confirm Password</b></label>
                     <input id="regOnly2" class="modalInput" type="password" placeholder="Enter Password" name="psw" required>
-                    <button class="modalButton" type="submit">Login</button>
+                    <button id="modalButtonConfirm" type="submit"></button>
                     <input class="rememberLogin" type="checkbox" checked="checked"> Remember me
                 </div>
             </form>
             <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
                 <button onclick="closeLogin();" type="button" class="btn link" style="color:#fff; background-color:#f44336">Cancel</button>
-                <button type="button" class="btn right link" style="background-color:#2196F3">Forgot Password?</button>
-                
+                <button type="button" class="btn right link" style="background-color:#2196F3">Forgot Password?</button>                
             </div>
         </div>
     </div>
@@ -51,7 +51,8 @@
     <div class="topSpacer" style="right:220px"></div>
     <div class="topSpacer" style="right:120px"></div>
     <div id="titleFont">
-        kervan
+        made<br>
+        good
     </div>
     <form>
         <input id="locSearch" class="searchBar" type="text" name="location" value="Where are you going?" onfocus="if(this.value=='Where are you going?'){this.value=''};" onblur="if(this.value==''){this.value='Where are you going?';}">
@@ -62,6 +63,15 @@
     <div id="about" class="bottomLinks" style="left:20%"><b>About</b></div>
     <div id="support" class="bottomLinks" style="left:45%"><b>Support</b></div>
     <div id="blog" class="bottomLinks" style="right:20%"><b>Blog</b></div>
+
+    <div id="quickLinksDiv">
+        <div class="quickLinks"></div>
+        <div class="quickLinks"></div>
+        <div class="quickLinks"></div>
+        <div class="quickLinks"></div>
+        <div class="quickLinks"></div>
+    </div>
+
     <!-- LOAD EXTERNAL JS SCRIPTS -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
