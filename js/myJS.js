@@ -77,30 +77,20 @@ function addDD(n) {
     var ddCurrent = "dd" + n;
     var ddTitleCurr = "ddTitle" + n;
     var ddPast = "dd" + ddOpen;
-    var menuPast = "menu" + ddOpen;
     var ddTitlePrev = "ddTitle" + ddOpen;
-    var menuStyle = document.getElementById("menu" + n).style;
     if (ddOpen === 0) {
         // Open first DropDown List
         document.getElementById(ddCurrent).style.display = "block";
-        // menuStyle.opacity = "0.3";
-        menuStyle.backgroundColor = "#7598a3";
         ddOpen = n;
     } else if (ddOpen === n) {
         // Close Open DropDown List
-        document.getElementById(ddCurrent).style.display = "none";
-        //document.getElementById(menuPast).style.opacity = "1";
-        document.getElementById(menuPast).style.backgroundColor = '#a3bac2';        
+        document.getElementById(ddCurrent).style.display = "none";     
         ddOpen = 0;
     } else {
         // Remove Style From Previous Menu
         document.getElementById(ddPast).style.display = "none";
-        //document.getElementById(menuPast).style.opacity = "1";
-        document.getElementById(menuPast).style.backgroundColor = '#a3bac2';
         // Style Newly Clicked Menu
         document.getElementById(ddCurrent).style.display = "block";
-        //menuStyle.opacity = "0.3";
-        menuStyle.backgroundColor = '#7598a3';
         ddOpen = n;
     }
 }
@@ -133,7 +123,23 @@ for (var i = 0; i < acc.length; i++) {
             panel.style.display = "block";
         }
     }
+}
+
+
+var ddMenu = document.getElementsByClassName("filterMenu");
+for (var i = 0; i < ddMenu.length; i++) {
+    ddMenu[i].onclick = function(){
+        this.classList.toggle("active");
+        // Toggle between hiding and showing the active panel 
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }        
+    }
 } 
+
 
 // Load List of Stores
 function loadStores() {

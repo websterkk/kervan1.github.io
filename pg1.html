@@ -30,43 +30,76 @@
     
     <div id="activityContainer">
         <div id="menu1" class="filterMenu rightMarginLarge link" onclick="addDD(1);">Products</div>
-        <div id="menu2" class="filterMenu rightMarginLarge link" onclick="addDD(2);">Green</space></div>
-        <div id="menu3" class="filterMenu rightMarginLarge link" onclick="addDD(3);">For A Cause</div>
-        <div id="menu4" class="filterMenu link" onclick="addDD(4);">Local</div>
+        <!--<div id="menu4" class="filterMenu link" onclick="addDD(4);">Local</div>-->
         <div id="dd1" class="ddContainer abs">
-            <button class="accordion">Goods</button>
-            <div class="accordianPanel">
-                <input type="checkbox"> Accessories<br>
-                <input type="checkbox"> Art<br>
-                <input type="checkbox"> Books<br>
-                <input type="checkbox"> Children's Clothing<br>
-                <input type="checkbox"> Furniture<br>
-                <input type="checkbox"> Household<br>
-                <input type="checkbox"> Jewelry<br>
-                <input type="checkbox"> Maker Supplies<br>
-                <input type="checkbox"> Men's Clothing<br>
-                <input type="checkbox"> Music<br>
-                <input type="checkbox"> Rugs<br>
+            <button class="accordion">Accessories</button>
+            <div class="accordionPanel">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Belts & Suspenders<br>
+                <input type="checkbox"> Bags & Purses<br>
+                <input type="checkbox"> Gloves & Mittens<br>
+                <input type="checkbox"> Hair & Head<br>
+                <input type="checkbox"> Hats & Caps<br>
+                <input type="checkbox"> Scarves & Wraps<br>
+                <input type="checkbox"> Suit & Tie<br>
+                <input type="checkbox"> Sunglasses & Eyewear<br>
+                <input type="checkbox"> Umbrella & Rain
+            </div>
+            <button class="accordion">Art</button>
+            <div class="accordionPanel">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Dolls & Miniatures<br>
+                <input type="checkbox"> Drawings & Illustrations<br>
+                <input type="checkbox"> Fiber Arts<br>
+                <input type="checkbox"> Painting<br>
+                <input type="checkbox"> Photography<br>
+                <input type="checkbox"> Prints<br>
+                <input type="checkbox"> Sculpture<br>
+                <input type="checkbox"> Glass
+            </div>
+            <button class="accordion">Clothing & Shoes</button>
+            <div class="accordionPanel">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Women<br>
+                <input type="checkbox"> Men<br>
+                <input type="checkbox"> Kids<br>
                 <input type="checkbox"> Shoes<br>
-                <input type="checkbox"> Textiles<br>
-                <input type="checkbox"> Toys<br>
-                <input type="checkbox"> Women's Clothing
+                <input type="checkbox"> Vintage
             </div>
-
-            <button class="accordion">Materials</button>
-            <div class="accordianPanel">
-                <input type="checkbox"> Cloth<br>
-                <input type="checkbox"> Ceramic<br>
-                <input type="checkbox"> Glass<br>
-                <input type="checkbox"> Leather<br>
-                <input type="checkbox"> Metal<br>
-                <input type="checkbox"> Wood
+            <button class="accordion">Craft Supplies</button>
+            <div class="accordionPanel">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Home Improvement<br>
+                <input type="checkbox"> Woodworking & Carpentry<br>
+                <input type="checkbox"> Candle Making<br>
+                <input type="checkbox"> Dolls & Model Making<br>
+                <input type="checkbox"> Electronics & Ciircuitry<br>
+                <input type="checkbox"> Floral & Garden Crafts<br>
+                <input type="checkbox"> Food<br>
+                <input type="checkbox"> Jewelry<br>
+                <input type="checkbox"> Paper & Craft<br>
+                <input type="checkbox"> Ceramics & Pottery<br>
+                <input type="checkbox"> Glass Art<br>
+                <input type="checkbox"> Metalworking<br>
+                <input type="checkbox"> Mosaic<br>
+                <input type="checkbox"> Crochet<br>
+                <input type="checkbox"> Knitting<br>
+                <input type="checkbox"> Leatherworking<br>
+                <input type="checkbox"> Rug Making<br>
+                <input type="checkbox"> Sewing & Needlecraft<br>
+                <input type="checkbox"> Shoemaking<br>
+                <input type="checkbox"> Spinning<br>
+                <input type="checkbox"> Upholstery<br>
+                <input type="checkbox"> Weaving & Tapestry<br>
+                <input type="checkbox"> Drawing<br>
+                <input type="checkbox"> Dyeing<br>
+                <input type="checkbox"> Painting<br>
+                <input type="checkbox"> Photography
             </div>
         </div>
+        <div id="menu2" class="filterMenu rightMarginLarge link" onclick="addDD(2);">Cause</space></div>
         <div id="dd2" class="ddContainer abs">
-
-        </div>
-        <div id="dd3" class="ddContainer abs">
+            <input type="checkbox"> All<br>
             <input type="checkbox"> Animals<br>
             <input type="checkbox"> Arts & Culture<br>
             <input type="checkbox"> Children<br>
@@ -84,7 +117,9 @@
             <input type="checkbox"> Trafficked Persons<br>
             <input type="checkbox"> Women
         </div>
-        <div id="dd4" class="ddContainer abs">            
+        <div id="menu3" class="filterMenu rightMarginLarge link" onclick="addDD(3);">Source</div>
+        <div id="dd3" class="ddContainer abs">            
+            <input type="checkbox"> All<br>
             <input type="checkbox"> Fair Trade USA Certified<br>
             <input type="checkbox"> Fair Trade International Certified<br>
             <input type="checkbox"> Locally-Made<br>
@@ -176,9 +211,9 @@
         }
         var map = new google.maps.Map(document.getElementById("mapContainer"), mapOptions);
         }
-</script>
+    </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUw5XcoBhijjucUbazR2x27JDmVlV7bk&callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeUw5XcoBhijjucUbazR2x27JDmVlV7bk&callback=myMap"></script>
 </body>
 
 </html>

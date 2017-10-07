@@ -373,21 +373,20 @@ a {
 
 .filterMenu {
     height: calc(100% - 7px);
-    width: calc(25% - 6px);
-    background-color: #a3bac2;
+    width: calc(20% - 0px);
     display: inline-block;
     float: left;
     text-align: center;
     padding-top: 7px;
-    border-bottom: 3px black solid;
+    border-bottom: 2px black solid;
 }
 
-.filterMenu:hover {
-    background-color: #7598a3;
+.filterMenu.active, .filterMenu:hover {
+    background-color: rgba(200,200,200,0.5);
 }
 
 .rightMarginLarge {
-    margin-right: 8px;
+    margin-right: 0px;
 }
 
 #mainContainer {
@@ -397,7 +396,6 @@ a {
     top: 104px;
     height: calc(100% - 114px);
     display: inline-block;
-    background-color: paleturquoise;
 }
 
 #selectContainer {
@@ -442,12 +440,12 @@ a {
 
 .ddContainer {
     position: absolute;
-    top:37px;
+    top:39px;
     width:20%;
     background-color: white;
     display: none;
     z-index: 2;
-    border: 1px solid black;
+    font-size: 13px
 }
 
 #dd1 {
@@ -455,20 +453,11 @@ a {
 }
 
 #dd2 {
-    left: 25%;
+    left: 20%;
 }
 
 #dd3 {
-    left: 50%;
-}
-
-#dd4 {
-    left: 75%;
-}
-
-#dd5 {
-    top: 150px;
-    height: 175px;
+    left: 40%;
 }
 
 button.accordion {
@@ -480,7 +469,6 @@ button.accordion {
     text-align: left;
     border: none;
     outline: none;
-    transition: 0.4s;
 }
 
 button.accordion.active, button.accordion:hover {
@@ -499,7 +487,7 @@ button.accordion.active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
-.accordianPanel {
+.accordionPanel {
     padding: 0 10px;
     background-color: white;
     display: none;
