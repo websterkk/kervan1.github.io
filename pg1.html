@@ -6,9 +6,19 @@
     <link rel="icon" href="./img/globe.jpg">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
     <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
+    <style type="text/css">
+        body {
+            background-image: url(img/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
 </head>
 
 <body onload="pg1();">
+    <div class="entireBlur"></div>
     <!-- INDEX PAGE -->
     <div id="signUp" class="topLinks" style="right:30px"><b>Sign Up</b></div>
     <div id="logIn" class="topLinks" style="right:130px"><b>Login</b></div>
@@ -34,67 +44,130 @@
         <div id="dd1" class="ddContainer abs">
             <button class="accordion">Accessories</button>
             <div class="accordionPanel">
-                <input type="checkbox"> All<br>
-                <input type="checkbox"> Belts & Suspenders<br>
-                <input type="checkbox"> Bags & Purses<br>
-                <input type="checkbox"> Gloves & Mittens<br>
-                <input type="checkbox"> Hair & Head<br>
-                <input type="checkbox"> Hats & Caps<br>
-                <input type="checkbox"> Scarves & Wraps<br>
-                <input type="checkbox"> Suit & Tie<br>
-                <input type="checkbox"> Sunglasses & Eyewear<br>
-                <input type="checkbox"> Umbrella & Rain
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Belts & Suspenders<br>
+                    <input type="checkbox"> Bags & Purses<br>
+                    <input type="checkbox"> Gloves & Mittens<br>
+                    <input type="checkbox"> Hair & Head<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Hats & Caps<br>
+                    <input type="checkbox"> Scarves & Wraps<br>
+                    <input type="checkbox"> Suit & Tie<br>
+                    <input type="checkbox"> Sunglasses & Eyewear<br>
+                    <input type="checkbox"> Umbrella & Rain
+                </div>
             </div>
             <button class="accordion">Art</button>
             <div class="accordionPanel">
-                <input type="checkbox"> All<br>
-                <input type="checkbox"> Dolls & Miniatures<br>
-                <input type="checkbox"> Drawings & Illustrations<br>
-                <input type="checkbox"> Fiber Arts<br>
-                <input type="checkbox"> Painting<br>
-                <input type="checkbox"> Photography<br>
-                <input type="checkbox"> Prints<br>
-                <input type="checkbox"> Sculpture<br>
-                <input type="checkbox"> Glass
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Dolls & Miniatures<br>
+                    <input type="checkbox"> Drawings & Illustrations<br>
+                    <input type="checkbox"> Fiber Arts<br>
+                    <input type="checkbox"> Painting
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Photography<br>
+                    <input type="checkbox"> Prints<br>
+                    <input type="checkbox"> Sculpture<br>
+                    <input type="checkbox"> Glass
+                </div>
             </div>
             <button class="accordion">Clothing & Shoes</button>
             <div class="accordionPanel">
-                <input type="checkbox"> All<br>
-                <input type="checkbox"> Women<br>
-                <input type="checkbox"> Men<br>
-                <input type="checkbox"> Kids<br>
-                <input type="checkbox"> Shoes<br>
-                <input type="checkbox"> Vintage
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Women<br>
+                    <input type="checkbox"> Men<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Kids<br>
+                    <input type="checkbox"> Shoes<br>
+                    <input type="checkbox"> Vintage
+                </div>
             </div>
             <button class="accordion">Craft Supplies</button>
             <div class="accordionPanel">
-                <input type="checkbox"> All<br>
-                <input type="checkbox"> Home Improvement<br>
-                <input type="checkbox"> Woodworking & Carpentry<br>
-                <input type="checkbox"> Candle Making<br>
-                <input type="checkbox"> Dolls & Model Making<br>
-                <input type="checkbox"> Electronics & Ciircuitry<br>
-                <input type="checkbox"> Floral & Garden Crafts<br>
-                <input type="checkbox"> Food<br>
-                <input type="checkbox"> Jewelry<br>
-                <input type="checkbox"> Paper & Craft<br>
-                <input type="checkbox"> Ceramics & Pottery<br>
-                <input type="checkbox"> Glass Art<br>
-                <input type="checkbox"> Metalworking<br>
-                <input type="checkbox"> Mosaic<br>
-                <input type="checkbox"> Crochet<br>
-                <input type="checkbox"> Knitting<br>
-                <input type="checkbox"> Leatherworking<br>
-                <input type="checkbox"> Rug Making<br>
-                <input type="checkbox"> Sewing & Needlecraft<br>
-                <input type="checkbox"> Shoemaking<br>
-                <input type="checkbox"> Spinning<br>
-                <input type="checkbox"> Upholstery<br>
-                <input type="checkbox"> Weaving & Tapestry<br>
-                <input type="checkbox"> Drawing<br>
-                <input type="checkbox"> Dyeing<br>
-                <input type="checkbox"> Painting<br>
-                <input type="checkbox"> Photography
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Home Improvement<br>
+                    <input type="checkbox"> Woodworking & Carpentry<br>
+                    <input type="checkbox"> Candle Making<br>
+                    <input type="checkbox"> Dolls & Model Making<br>
+                    <input type="checkbox"> Electronics & Ciircuitry<br>
+                    <input type="checkbox"> Floral & Garden Crafts<br>
+                    <input type="checkbox"> Food<br>
+                    <input type="checkbox"> Jewelry<br>
+                    <input type="checkbox"> Paper & Craft<br>
+                    <input type="checkbox"> Ceramics & Pottery<br>
+                    <input type="checkbox"> Glass Art<br>
+                    <input type="checkbox"> Metalworking<br>
+                    <input type="checkbox"> Mosaic<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Robotics<br>
+                    <input type="checkbox"> Crochet<br>
+                    <input type="checkbox"> Knitting<br>
+                    <input type="checkbox"> Leatherworking<br>
+                    <input type="checkbox"> Rug Making<br>
+                    <input type="checkbox"> Sewing & Needlecraft<br>
+                    <input type="checkbox"> Shoemaking<br>
+                    <input type="checkbox"> Spinning<br>
+                    <input type="checkbox"> Upholstery<br>
+                    <input type="checkbox"> Weaving & Tapestry<br>
+                    <input type="checkbox"> Drawing<br>
+                    <input type="checkbox"> Dyeing<br>
+                    <input type="checkbox"> Painting<br>
+                    <input type="checkbox"> Photography<br>                    
+                </div>
+            </div>
+            <button class="accordion">Entertainment</button>
+            <div class="accordionPanel">
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Toys<br>
+                    <input type="checkbox"> Music<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Books<br>
+                    <input type="checkbox"> Games<br>
+                    <input type="checkbox"> Outdoor / Recreation
+                </div>
+            </div>
+            <button class="accordion">Jewelry</button>
+            <div class="accordionPanel">
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Body Jewelry<br>
+                    <input type="checkbox"> Bracelets<br>
+                    <input type="checkbox"> Cuff Links & Tie Clips<br>
+                    <input type="checkbox"> Earrings<br>
+                    <input type="checkbox"> Necklaces<br>
+                    <input type="checkbox"> Rings<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Gold<br>
+                    <input type="checkbox"> Silver<br>
+                    <input type="checkbox"> Brass<br>
+                    <input type="checkbox"> Bead<br>
+                    <input type="checkbox"> Precious<br>
+                    <input type="checkbox"> Semi-Precious
+                </div>
+            </div>
+            <button class="accordion">Home & Household</button>
+            <div class="accordionPanel">
+                <div class="accordionLeft">
+                    <input type="checkbox"> All<br>
+                    <input type="checkbox"> Furniture<br>
+                    <input type="checkbox"> Rugs<br>
+                </div>
+                <div class="accordionRight">
+                    <input type="checkbox"> Bedding & Linens<br>
+                    <input type="checkbox"> Lighting<br>
+                    <input type="checkbox"> Home Decor
+                </div>
             </div>
         </div>
         <div id="menu2" class="filterMenu rightMarginLarge link" onclick="addDD(2);">Cause</space></div>
@@ -122,6 +195,7 @@
             <input type="checkbox"> All<br>
             <input type="checkbox"> Fair Trade USA Certified<br>
             <input type="checkbox"> Fair Trade International Certified<br>
+            <input type="checkbox"> Green Supply Chain<br>
             <input type="checkbox"> Locally-Made<br>
         </div>        
     </div>
