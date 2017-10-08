@@ -1,24 +1,5 @@
 /*--Kervan Style Sheet--*/
 
-@media(max-width: 1200px) {
-    html {
-        font-size: 20px
-    }
-}
-
-@media(max-width: 900px) {
-    html {
-        font-size: 15px
-    }
-}
-
-@media(max-width: 600px) {
-    html {
-        font-size: 12px
-    }
-}
-
-
 body {
     height: 100%;
     width: 100%;
@@ -47,592 +28,637 @@ a {
     position: relative;
 }
 
-.bigMargin {
-    
+@media(min-width: 200px) {
+    html {
+        font-size: 12px
+    }
+    /*------------------------ MAIN PAGE ---------------------------*/
+    #titleFont {
+        position: absolute;
+        top: calc(5% - 0px);
+        font-size: 65px;
+        left: 5%;
+    }
+    #titleFont2 {
+        position: absolute;
+        top: calc(5% + 40px);
+        font-size: 85px;
+        left: 5%;
+    }
+    #searchButton {
+        position: absolute;
+        top: calc(45% - 15px);
+        right: 7%;
+        height: 30px;
+        width: 30px;
+    }
+    #searchButtonIcon {
+        position: absolute;
+        top: calc(45% - 15px);
+        right: 7%;
+        height: 30px;
+        width: 30px;
+        background-image: url(../img/searchIcon2.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        cursor: pointer;
+        border: 0;
+        outline: 0;
+    }
+    #searchButtonIcon:hover {
+        opacity: 0.85;
+    }
+    .searchBar {
+        position: absolute;
+        padding-left: 8px;
+        padding-right: 37px;
+        top: calc(45% - 15px);
+        left: 7%;
+        height: 28.5px;
+        width: calc(86% - 45px);
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgb(30, 30, 30);
+        font-size: 18px;
+        max-height: 30px;
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
+    #xBorder {
+        position: absolute;
+        top: 70%;
+        left: 12%;
+        width: 76%;
+        height: 4px;
+        background-color: black;
+    }
+    .topLinks {
+        position: absolute;
+        top: 1.5%;
+        width: 80px;
+        text-align: center;
+        cursor: pointer;
+        font-size: 17px;
+    }
+    .topSpacer {
+        position: absolute;
+        top: 1.5%;
+        height: 20px;
+        width: 2px;
+        background-color: black;
+    }
+    .bottomLinks {
+        position: absolute;
+        top: calc(72% + 4px);
+        width: 10%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    #quickLinksDiv {
+        position: absolute;
+        top: calc(80% - 0px);
+        width: 76%;
+        left: 12%;
+        height: 17%;
+        background-color: black;
+    }
+    .quickLinks {
+        width: calc(17vh - 0px);
+        height: calc(100% - 6px);
+        margin-top: 3px;
+        margin-left: 15px;
+        background-color: red;
+        display: inline-block;
+    }
+    .modalBackground {
+        z-index: 3;
+        display: none;
+        padding-top: 100px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.8)
+    }
+    .modalContent {
+        margin: auto;
+        background-color: #fff;
+        position: relative;
+        padding: 0;
+        outline: 0;
+        width: 400px;
+    }
+    .modalInput {
+        display: block;
+        border: none;
+        border-bottom: 1px solid #808080;
+        width: calc(100% - 32px);
+        display: block;
+        padding: 8px 16px 8px 16px;
+        border: none;
+        outline: none;
+        border: 1px solid #ccc!important;
+        margin-bottom: 16px!important;
+    }
+    .modalInput:not(:valid)~.w3-validate {
+        color: forestgreen;
+    }
+    .rememberLogin {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: 6px;
+        margin-top: 8px!important;
+    }
+    .rememberLogin:checked+ {
+        color: #009688;
+    }
+    .rememberLogin:disabled+ {
+        color: #aaa;
+    }
+    .modalForm {
+        padding: 0.01em 16px
+    }
+    .modalForm:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+    .modalInDiv {
+        margin-top: 16px!important;
+        margin-bottom: 16px!important
+    }
+    #modalButtonConfirm {
+        color: #fff!important;
+        background-color: #4CAF50!important;
+        margin-top: 8px!important;
+        margin-bottom: 8px!important;
+        border: none;
+        display: inline-block;
+        outline: 0;
+        padding: 6px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none!important;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+        width: 100%
+    }
+    .modalButtonConfirm:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    .loginTab {
+        display: inline-block;
+        padding: 15px;
+        width: calc(50% - 32px);
+        text-align: center;
+    }
+    .loginTab:hover {
+        background-color: #f9f9f9;
+    }
+    .loginTabSelected {
+        background-color: white;
+    }
+    .loginTabsContainer {
+        display: inline-block;
+        background-color: #ccc;
+        width: 100%;
+    }
+    .w3-container {
+        padding: 0.01em 16px
+    }
+    .w3-container:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+    .w3-border-top {
+        border-top: 1px solid #ccc!important
+    }
+    .w3-padding-16 {
+        padding-top: 8px!important;
+        padding-bottom: 8px!important
+    }
+    .w3-light-grey {
+        color: #000!important;
+        background-color: #f1f1f1!important
+    }
+    .btn {
+        border: none;
+        display: inline-block;
+        outline: 0;
+        padding: 6px 16px;
+        vertical-align: middle;
+        overflow: hidden;
+        text-decoration: none!important;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .btn:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    .w3-btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.3
+    }
+    .w3-red {
+        color: #fff!important;
+        background-color: #f44336!important
+    }
+    .right {
+        float: right!important
+    }
+    .w3-padding {
+        padding: 8px 16px!important
+    }
+    .mobileToggleButton {
+        height: calc(100% - 12px);
+        width: calc(50% - 10px);
+        margin: 0px 5px 0px 5px;
+        background-color: lightslategray;
+        float: left;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 12px;
+    }
+    #activityContainer {
+        display: none;
+    }
+    #selectContainer {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        height: calc(100% - 170px);
+        width: calc(100% - 20px);
+        display: none;
+    }
+    #mobileFilterMenu {
+        position: absolute;
+        top: 45px;
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        display: block;
+        background-image: url(../img/mobileMenu.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    #mobileDropdown {
+        position: absolute;
+        display: block;
+    }
+    #locationPageSearch {
+        position: absolute;
+        top: 45px;
+        left: 40px;
+        height: 40px;
+        width: calc(100vw - 68px);
+    }
+    #locationTitleBar {
+        position: absolute;
+        top: 10px;
+        height: 45px;
+        left: 10px;
+        display: block;
+    }
+    .mapClass {
+        background-color: green;
+        display: block;
+    }
+    .mapPopup {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        height: calc(100% - 170px);
+        width: calc(100% - 20px);
+    }
+    .mapNoPopup {
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        height: calc(100% - 170px);
+        width: calc(100% - 20px);
+    }
+    #mobileToggleContainer {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        height: 50px;
+        display: block;
+    }
+    /*-------------------------- PAGE 1 ----------------------------*/
+    .entireBlur {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: white;
+        opacity: 0.5;
+    }
+    #locationName {
+        font-size: 36px;
+        display: inline-block;
+    }
+    .searchBarLoc {
+        position: relative;
+        top: 8px;
+        left: 5px;
+        width: calc(100% - 15px);
+        background-color: rgba(255, 255, 255, 0.5);
+        color: rgb(30, 30, 30);
+        font-size: 18px;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        padding-left: 5px;
+    }
+    .colorCoded {
+        padding-top: 10px;
+    }
+    .activityTitle {
+        padding-top: 3px;
+    }
+    .filterMenu {
+        height: calc(100% - 9px);
+        width: calc(20% - 0px);
+        float: left;
+        text-align: center;
+        padding-top: 9px;
+        border-bottom: 2px black solid;
+        font-size: 16px;
+    }
+    .filterMenu:hover {
+        background-color: rgba(200, 200, 200, 0.5);
+    }
+    #mainContainer {
+        position: absolute;
+        top: 104px;
+        height: calc(100% - 114px);
+        left: 10px;
+        width: calc(100% - 20px);
+        background-color: greenyellow;
+    }
+    .ddTitle {
+        margin-bottom: 4px;
+        width: 100%;
+        height: 26px;
+        background-color: #cccccc;
+    }
+    .ddTitle:hover {
+        background-color: #a6a6a6;
+    }
+    #ddTitle1 {
+        top: 0px;
+    }
+    #ddTitle2 {
+        top: 30px;
+    }
+    #ddTitle3 {
+        top: 60px;
+    }
+    #ddTitle4 {
+        top: 90px;
+    }
+    #ddTitle5 {
+        top: 120px;
+    }
+    .ddContainer {
+        position: absolute;
+        top: 39px;
+        width: 35%;
+        background-color: white;
+        display: none;
+        z-index: 2;
+        font-size: 13px;
+        max-height: calc(100vh - 109px);
+        overflow-y: auto;
+    }
+    #dd1 {
+        left: 0px;
+    }
+    #dd2 {
+        left: 20%;
+    }
+    #dd3 {
+        left: 40%;
+    }
+    button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+    }
+    button.accordion.active,
+    button.accordion:hover {
+        background-color: #ccc;
+    }
+    button.accordion:after {
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+    }
+    button.accordion.active:after {
+        content: "\2796";
+        /* Unicode character for "minus" sign (-) */
+    }
+    .accordionPanel {
+        padding: 2px 2px;
+        background-color: white;
+        display: none;
+    }
+    .accordionLeft {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: calc(50% - 2px);
+        float: left;
+        height: 100%;
+    }
+    .accordionRight {
+        position: relative;
+        top: 0px;
+        right: 0%;
+        width: calc(50% - 2px);
+        height: 100%;
+        float: right;
+    }
+    #filteredContainer {
+        top: 0px;
+        height: 100%;
+        width: calc(100% + 6px);
+        margin-left: -6px;
+        overflow-y: auto;
+    }
+    .filteredItem {
+        height: 50vw;
+        background-color: red;
+    }
+    .halfDiv {
+        width: calc(50% - 6px);
+        margin: 0px 0px 6px 6px;
+        float: left;
+    }
+    .filteredImage {
+        width: 100%;
+        height: 80%;
+        background-color: goldenrod;
+    }
+    .filteredName {
+        width: 100%;
+        height: 20%;
+        background-color: pink;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .listDD:hover .dropdown-content {
+        display: inline-block;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
 }
 
-/*------------------------ MAIN PAGE ---------------------------*/
-#titleFont {
-    position: absolute;
-    top: calc(15% - 25px);
-    font-size: 4rem;
-    left: 5%;
+@media only screen and (min-width:800px) {
+    html {
+        font-size: 15px
+    }
+    #locationPageSearch {
+        position: relative;
+        left: 10px;
+        top: -10px;
+        height: calc(100% - 4px);
+        width: 300px;
+        display: inline-block;
+    }
+    #mobileToggleContainer {
+        display: none;
+    }
+    #mobileFilterMenu {
+        position: absolute;
+        top: 45px;
+        left: 10px;
+        width: 20px;
+        background-color: blueviolet;
+        display: none;
+    }
+    #mobileDropdown {
+        display: none;
+    }
+    #activityContainer {
+        position: absolute;
+        left: 10px;
+        width: calc(100% - 20px);
+        top: 60px;
+        height: 37px;
+        display: block;
+    }
+    #selectContainer {
+        position: absolute;
+        top: 104px;
+        left: 10px;
+        height: calc(100% - 114px);
+        width: calc(30%);
+        display: block;
+    }
+    .filteredItem {
+        height: 16vw;
+        background-color: red;
+    }
+    #popupContainer {
+        position: absolute;
+        top: 104px;
+        height: calc(100% - 114px);
+        left: calc(30% + 15px);
+        width: 20%;
+        background-color: purple;
+        display: none;
+    }
+    .mapClass {
+        background-color: green;
+        display: block;
+    }
+    .mapPopup {
+        position: absolute;
+        top: 104px;
+        left: calc(50% + 20px);
+        width: calc(50% - 30px);
+        height: calc(100% - 114px);
+    }
+    .mapNoPopup {
+        position: absolute;
+        top: 104px;
+        height: calc(100% - 114px);
+        left: calc(30% + 15px);
+        width: calc(70% - 20px);
+    }
 }
 
-#searchButton {
-    position: absolute;
-    top: calc(45% - 15px);
-    right: 7%;
-    height: 30px;
-    width: 30px;
+@media(min-width: 1200px) {
+    html {
+        font-size: 20px
+    }
+    #locationPageSearch {
+        position: relative;
+        left: 10px;
+        top: -10px;
+        height: calc(100% - 4px);
+        width: 500px;
+        display: inline-block;
+    }
+    #locationTitleBar {
+        position: absolute;
+        top: 10px;
+        height: 45px;
+        left: 10px;
+        right: 200px;
+        display: block;
+    }
 }
-
-#searchButtonIcon {
-    position: absolute;
-    top: calc(45% - 15px);
-    right: 7%;
-    height: 30px;
-    width: 30px;
-    background-image: url(../img/searchIcon2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-}
-
-#searchButtonIcon:hover {
-    opacity: 0.85;
-}
-
-.searchBar {
-    position: absolute;
-    padding-left: 8px;
-    padding-right: 37px;
-    top: calc(45% - 15px);
-    left: 7%;
-    height: 28.5px;
-    width: calc(86% - 45px);
-    background-color: rgba(255,255,255,0.5);
-    color: rgb(30,30,30);
-    font-size: 18px;
-    max-height: 30px;
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-#xBorder {
-    position: absolute;
-    top: 70%;
-    left: 12%;
-    width: 76%;
-    height: 4px;
-    background-color: black;
-}
-
-.topLinks {
-    position: absolute;
-    top: 1.5%;
-    width: 80px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-.topSpacer {
-    position: absolute;
-    top: 1.5%;
-    height: 20px;
-    width: 2px;
-    background-color: black;
-}
-
-.bottomLinks {
-    position: absolute;
-    top: calc(72% + 4px);
-    width: 10%;
-    text-align: center;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-#quickLinksDiv {
-    position: absolute;
-    top: calc(80% - 0px);
-    width: 76%;
-    left: 12%;
-    height: 17%;
-    background-color: black;
-}
-
-.quickLinks {
-    width: calc(17vh - 0px);
-    height: calc(100% - 6px);
-    margin-top: 3px;
-    margin-left: 15px;
-    background-color: red;
-    display: inline-block;
-}
-
-.modalBackground {
-    z-index: 3;
-    display: none;
-    padding-top: 100px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.8)
-}
-
-.modalContent {
-    margin: auto;
-    background-color: #fff;
-    position: relative;
-    padding: 0;
-    outline: 0;
-    width: 400px;
-}
-
-.modalInput {
-    display: block;
-    border: none;
-    border-bottom: 1px solid #808080;
-    width: calc(100% - 32px);
-    display: block;
-    padding: 8px 16px 8px 16px;
-    border: none;
-    outline: none;
-    border: 1px solid #ccc!important;
-    margin-bottom: 16px!important;
-}
-
-.modalInput:not(:valid)~.w3-validate {
-    color: forestgreen;
-}
-
-.rememberLogin {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    top: 6px;
-    margin-top: 8px!important;
-}
-
-.rememberLogin:checked+ {
-    color: #009688;
-}
-
-.rememberLogin:disabled+ {
-    color: #aaa;
-}
-
-.modalForm {
-    padding: 0.01em 16px
-}
-
-.modalForm:after {
-    content: "";
-    display: table;
-    clear: both
-}
-
-.modalInDiv {
-    margin-top: 16px!important;
-    margin-bottom: 16px!important
-}
-
-#modalButtonConfirm {
-    color: #fff!important;
-    background-color: #4CAF50!important;
-    margin-top: 8px!important;
-    margin-bottom: 8px!important;
-    border: none;
-    display: inline-block;
-    outline: 0;
-    padding: 6px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none!important;
-    color: #fff;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    white-space: nowrap;
-    width: 100%
-}
-
-.modalButtonConfirm:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.loginTab {
-    display: inline-block;
-    padding: 15px;
-    width: calc(50% - 32px);
-    text-align: center;
-}
-
-.loginTab:hover {
-    background-color: #f9f9f9;
-}
-
-.loginTabSelected {
-    background-color: white;
-}
-
-.loginTabsContainer {
-    display: inline-block;
-    background-color: #ccc;
-    width: 100%;
-}
-
-.w3-container {
-    padding: 0.01em 16px
-}
-
-.w3-container:after {
-    content: "";
-    display: table;
-    clear: both
-}
-
-.w3-border-top {
-    border-top: 1px solid #ccc!important
-}
-
-.w3-padding-16 {
-    padding-top: 8px!important;
-    padding-bottom: 8px!important
-}
-
-.w3-light-grey {
-    color: #000!important;
-    background-color: #f1f1f1!important
-}
-
-.btn {
-    border: none;
-    display: inline-block;
-    outline: 0;
-    padding: 6px 16px;
-    vertical-align: middle;
-    overflow: hidden;
-    text-decoration: none!important;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.btn:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
-
-.w3-btn:disabled {
-    cursor: not-allowed;
-    opacity: 0.3
-}
-
-.w3-red {
-    color: #fff!important;
-    background-color: #f44336!important
-}
-
-.right {
-    float: right!important
-}
-
-.w3-padding {
-    padding: 8px 16px!important
-}
-
-
 
 
 /*--------------------------------------------------------------*/
-/*-------------------------- PAGE 1 ----------------------------*/
-/*--------------------------------------------------------------*/
-.entireBlur {
-    position:absolute;
-    top:0px;
-    left:0px;
-    right:0px;
-    bottom: 0px;
-    background-color: white;
-    opacity: 0.5;
-}
-
-#activityContainer {
-    position: absolute;
-    left: 10px;
-    width: calc(100% - 20px);
-    top: 60px;
-    height: 37px;
-    display: block;
-}
-
-#locationTitleBar {
-    position: absolute;
-    top: 10px;
-    height:45px;
-    left: 10px;
-    right: 500px;
-    display: block;
-}
-
-#locationName {
-    font-size: 30px;
-    display: inline-block;
-}
-
-#locationPageSearch {
-    position:relative;
-    top:-10px;
-    height:calc(100% - 4px);
-    width:500px;
-    display: inline-block;
-}
-
-.searchBarLoc {
-    position: relative;
-    top: 8px;
-    left: 15px;
-    width: calc(100% - 15px);
-    background-color: rgba(255,255,255,0.5);
-    color: rgb(30,30,30);
-    font-size: 18px;
-    outline: none;
-    border: none;
-    box-shadow: none;
-}
-
-.colorCoded {
-    padding-top: 10px;
-}
-
-.activityTitle {
-    padding-top:3px;
-}
-
-.filterMenu {
-    height: calc(100% - 7px);
-    width: calc(20% - 0px);
-    display: inline-block;
-    float: left;
-    text-align: center;
-    padding-top: 7px;
-    border-bottom: 2px black solid;
-}
-
-.filterMenu.active, .filterMenu:hover {
-    background-color: rgba(200,200,200,0.5);
-}
-
-.rightMarginLarge {
-    margin-right: 0px;
-}
-
-#mainContainer {
-    position: absolute;
-    left: 10px;
-    width: calc(100% - 20px);
-    top: 104px;
-    height: calc(100% - 114px);
-    display: inline-block;
-}
-
-#selectContainer {
-    position: relative;
-    height: 100%;
-    width: calc(30% - 3px);
-    margin-right: 3px;
-    float: left;
-    display: inline-block;
-}
-
-.ddTitle {
-    margin-bottom: 4px;
-    width: 100%;
-    height: 26px;
-    background-color: #cccccc;
-}
-
-.ddTitle:hover {
-    background-color: #a6a6a6;
-}
-
-#ddTitle1 {
-    top: 0px;
-}
-
-#ddTitle2 {
-    top: 30px;
-}
-
-#ddTitle3 {
-    top: 60px;
-}
-
-#ddTitle4 {
-    top: 90px;
-}
-
-#ddTitle5 {
-    top: 120px;
-}
-
-.ddContainer {
-    position: absolute;
-    top:39px;
-    width:35%;
-    background-color: white;
-    display: none;
-    z-index: 2;
-    font-size: 13px
-}
-
-#dd1 {
-    left: 0px;
-}
-
-#dd2 {
-    left: 20%;
-}
-
-#dd3 {
-    left: 40%;
-}
-
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-}
-
-button.accordion.active, button.accordion:hover {
-    background-color: #ccc;
-}
-
-button.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #777;
-    float: right;
-    margin-left: 5px;
-}
-
-button.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-.accordionPanel {
-    padding: 5px 5px;
-    background-color: white;
-    display: none;
-}
-
-.accordionLeft {
-    position: relative;
-    top:0px;
-    left:0px;
-    width: calc(50% - 2px);
-    display:inline-block;
-    height: 100%;
-}
-
-.accordionRight {
-    position: relative;
-    top:0px;
-    right:0%;
-    width: calc(50% - 2px);
-    display:inline-block;
-    height: 100%;
-    float: right;
-}
-
-.checkBoxItem {
-    
-}
-
-#filteredContainer {
-    top: 0px;
-    height: 100%;
-    width: calc(100% + 6px);
-    margin-left: -6px;
-    overflow-y: auto;
-}
-
-.filteredItem {
-    height: 16vw;
-    background-color: red;
-}
-
-.halfDiv {
-    width: calc(50% - 6px);
-    margin: 0px 0px 6px 6px;
-    display: inline-block;
-    float: left;
-}
-
-.filteredImage {
-    width: 100%;
-    height: 80%;
-    background-color: goldenrod;
-}
-
-.filteredName {
-    width: 100%;
-    height: 20%;
-    background-color: pink;
-}
-
-#mapContainer {
-    height: 100%;
-    margin: 0;
-    background-color: green;
-    display: inline-block
-}
-
-.popupMap {
-    width: calc(45% - 8px);
-}
-
-.nopopupMap {
-    width: 70%;
-}
-
-#popupContainer {
-    height: 100%;
-    width: calc(25% + 0px);
-    margin: 0;
-    background-color: purple;
-    float: left;
-    display: inline-block
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.listDD:hover .dropdown-content {
-    display: inline-block;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
 
 
-/*--------------------------------------------------------------*/
 /*-------------------------- PAGE 2 ----------------------------*/
+
+
 /*--------------------------------------------------------------*/
 
 .storeMenu {
     height: calc(100% - 7px);
     width: calc(16.667% - 6.67px);
     background-color: #a3bac2;
-    display: inline-block;
     float: left;
     text-align: center;
     padding-top: 7px
 }
+
 #socialMediaMenu {
     position: absolute;
     left: 10px;
@@ -675,6 +701,7 @@ button.accordion.active:after {
     margin: 0px 0px 10px 0px;
     width: 100%;
 }
+
 #storePhotoContainer {
     height: 35vh;
     background-color: red;
@@ -707,7 +734,6 @@ button.accordion.active:after {
 }
 
 .storeSectionContent {
-    display: inline-block;
     width: 80%;
     height: 100%;
     background-color: royalblue;
@@ -717,7 +743,7 @@ button.accordion.active:after {
 .similarContainer {
     width: 100%;
     height: calc(100% - 30px);
-    background-color:grey
+    background-color: grey
 }
 
 .similarItem {
@@ -740,18 +766,15 @@ button.accordion.active:after {
     width: calc(70% - 10px);
     float: right;
     background-color: rosybrown;
-    display: inline-block;
 }
 
 
-
-
-
 /*-- PRICE RANGE SLIDER --*/
+
 .ui-slider-range {
     background: #007fff;
     height: 100%;
-} 
+}
 
 .ui-slider-horizontal {
     position: absolute;
@@ -768,17 +791,17 @@ button.accordion.active:after {
     cursor: default;
     -ms-touch-action: none;
     touch-action: none;
-} 
+}
 
 .ui-widget-content .ui-state-active {
     border: 1px solid #0073e6;
     background: #007fff;
-} 
+}
 
 .ui-slider-horizontal .ui-slider-handle {
     top: -3px;
     margin-left: -5px;
-} 
+}
 
 #histogramContainer {
     position: absolute;
@@ -788,7 +811,7 @@ button.accordion.active:after {
     margin-left: 5%;
     border-bottom: 1px solid black;
     background-color: aliceblue;
-} 
+}
 
 .histo {
     position: absolute;
@@ -797,10 +820,9 @@ button.accordion.active:after {
     float: left;
     display: block;
     margin-left: 5px;
-} 
+}
 
 .histoBack {
-    display: inline-block;
     height: 100%;
     float: left;
 }

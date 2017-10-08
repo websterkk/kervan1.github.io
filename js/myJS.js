@@ -60,20 +60,7 @@ function closeLogin() {
     document.getElementById('id01').style.display='none'
 }
 
-$(document).ready(function () {
-    $(document).tooltip();
-    var langs = ['Delhi, India', 'New York City', 'Paris, France'];
-    $('#locSearch').autocomplete({
-        source: langs,
-        minLength: 0,
-        delay: 100
-    });
-    window.search = function () {
-        var a = document.getElementById('locSearch').value;
-    };
-
-});
-
+/*
 // OPEN DROP DOWN LISTS
 function addDD(n) {
     var ddCurrent = "dd" + n;
@@ -96,17 +83,48 @@ function addDD(n) {
         ddOpen = n;
     }
 }
+*/
 
-function checkForPopup() {
-    var popupBool = false;
-    if (popupBool === true) {
-        document.getElementById("popupContainer").style.display = "inline-block";
-        document.getElementById("mapContainer").classList.add("popupMap");
-    } else {
-        document.getElementById("popupContainer").style.display = "none";
-        document.getElementById("mapContainer").classList.add("nopopupMap");
+// OPEN DROP DOWN LISTS
+function addDD(n) {
+    var ddCurrent = "dd" + n;
+    var ddPast = "dd" + ddOpen;
+    var menuPast = "menu" + ddOpen;
+    var menuStyle = document.getElementById("menu" + n).style;
+    if (ddOpen === 0) { // NONE OPEN
+        document.getElementById(ddCurrent).style.display = "block";
+        menuStyle.color = "#666666";
+        ddOpen = n;
+    } else if (ddOpen === n) { // ALREADY OPEN
+        document.getElementById(ddCurrent).style.display = "none";
+        document.getElementById(menuPast).style.color = '#000000';        
+        ddOpen = 0;
+    } else { // DIFFERENT MENU OPEN
+        document.getElementById(ddPast).style.display = "none";
+        document.getElementById(menuPast).style.color = '#000000';
+        document.getElementById(ddCurrent).style.display = "block";
+        menuStyle.color = '#666666';
+        ddOpen = n;
     }
 }
+
+/*
+function checkForPopup() {
+    var popupBool = true;
+    if (popupBool === true) {
+        document.getElementById("popupContainer").style.display = "inline-block";
+        document.getElementById("mapContainer").classList.add("mapPopup");
+    } else {
+        document.getElementById("popupContainer").style.display = "none";
+        //document.getElementById("mapContainer").style.left = 'calc(30% + 15px)';
+        //document.getElementById("mapContainer").style.width = 'calc(70% - 20px)';
+        document.getElementById("mapContainer").classList.add("mapNoPopup");
+        //document.getElementById("mapContainer").cla
+    }
+    var a = document.getElementById("mapContainer").className;
+    alert(a);
+}
+*/
 
 var acc = document.getElementsByClassName("accordion");
 var aP = document.getElementsByClassName("accordionPanel");
@@ -127,7 +145,7 @@ for (var i = 0; i < acc.length; i++) {
     }
 }
 
-
+/*
 var ddMenu = document.getElementsByClassName("filterMenu");
 for (var i = 0; i < ddMenu.length; i++) {
     ddMenu[i].onclick = function(){
@@ -141,6 +159,19 @@ for (var i = 0; i < ddMenu.length; i++) {
         }        
     }
 } 
+*/
+
+// Switch Map View to Store View
+function storeView() {
+    document.getElementById("mapContainer").style.display = "none";
+    document.getElementById("selectContainer").style.display = "block";
+}
+
+// Switch Map View to Map View
+function mapView() {
+    document.getElementById("mapContainer").style.display = "block";
+    document.getElementById("selectContainer").style.display = "none";
+}
 
 
 // Load List of Stores
@@ -156,111 +187,6 @@ function getPriceRange() {
 function displaySelect() {
 
 }
-
-
-/*
-//GET h FROM DATABASE
-var h;
-var sliderMin;
-var sliderMax;
-var nSteps;
-
-$(function () {
-    // GET H
-    h = [2, 5, 2, 10, 3, 11, 5, 4, 6, 23, 8, 2, 4, 3, 6, 2, 15, 1, 4, 4, 6, 3, 7, 8, 3, 9];
-    // GET MIN AND MAX
-    var hMin = Math.min.apply(Math, h);
-    var hMax = Math.max.apply(Math, h);
-    // Get Distance
-    var dist1 = hMax - hMin;
-    var a = dist1 / 10;
-    var b = parseInt(a.toFixed(0));
-    var c = parseInt((hMin - 1).toFixed(0));
-    var d = 2;
-    var e = c + b;
-    var f;
-
-    while (e + b < hMax) {
-        e = e + b;
-        d += 1;
-        f = e + b;
-    }
-
-    nSteps = d;
-    sliderMin = c;
-    sliderMax = f;
-
-    $("#slider-range").slider({
-        range: true,
-        min: sliderMin,
-        max: sliderMax,
-        step: b,
-        values: [sliderMin, sliderMax],
-        slide: function (event, ui) {
-            $("#amount").val(ui.values[0] + " - " + ui.values[1]);
-        }
-    });
-
-    $("#amount").val(("#slider-range").slider("values", 0) +
-        " - " + ("#slider-range").slider("values", 1));
-
-    createHistogram();
-});
-
-function createHistogram() {
-
-    var distribution = [];
-    // get max value
-    var hMax = sliderMax
-        // get min value
-    var hMin = sliderMin
-        // get distance between max and min
-    var minMaxDist = hMax - hMin;
-    var eachColDist = minMaxDist / nSteps;
-
-    // Loop through each interval
-    for (var i = 0; i < nSteps; i++) {
-        distribution[i] = 0;
-        var thisMin = (i) * eachColDist + hMin;
-        var thisMax = thisMin + eachColDist;
-        for (var j = 0; j < h.length; j++) {
-            if (h[j] >= thisMin && h[j] < thisMax)
-                distribution[i] += 1;
-        }
-    }
-    plotHistogram(distribution);
-}
-
-function plotHistogram(h) {
-    var nBlocks = h.length;
-    var hTotal = h.reduce(add, 0);
-    // Maximum Distribution value
-    var dMax = Math.max.apply(Math, h);
-
-    function add(a, b) {
-        return a + b;
-    }
-
-    var wEach = 100 / nBlocks;
-
-    var divFill = '';
-    var style1;
-    var style2;
-    var thisHeight;
-
-    for (var i = 0; i < nBlocks; i++) {
-        divFill += '<div class="histoBack" style="width:' + wEach + '%">';
-        thisHeight = (h[i] / dMax).toFixed(3);
-        style1 = 'style="height:calc(' + thisHeight * 100;
-        style2 = '% - 2px); width:calc(' + wEach + '% - 10px);"';
-        divFill += '<div class = "histo" id="hB' + (i + 1) + '" ' + style1 + style2 + '></div>';
-        divFill += '</div>';
-    }
-
-    document.getElementById("histogramContainer").innerHTML = divFill;
-}
-
-*/
 
 function addAbout() {
     alert("about page");

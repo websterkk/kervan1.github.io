@@ -4,11 +4,11 @@
 
 <head>
     <link rel="icon" href="./img/globe.jpg">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="./css/myStyle.css">
     <style type="text/css">
         body {
-            background-image: url(img/background.jpg);
+            background-image: url('img/background2.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -25,22 +25,42 @@
     <div id="share" class="topLinks" style="right:230px"><b>Share</b></div>
     <div class="topSpacer" style="right:220px"></div>
     <div class="topSpacer" style="right:120px"></div>
-    
+
     <div id="locationTitleBar">
         <div id="locationName">
-            New York City
+            New York
         </div>
-
+        <div id="mobileFilterMenu" class="link"></div>
         <div id="locationPageSearch">
             <form>
-            <input class="searchBarLoc" type="text" name="location" value="What are you looking for?" onfocus="if(this.value=='What are you looking for?'){this.value=''};" onblur="if(this.value==''){this.value='What are you looking for?';}">
+                <input class="searchBarLoc" type="text" name="location" value="What are you looking for?" onfocus="if(this.value=='What are you looking for?'){this.value=''};"
+                    onblur="if(this.value==''){this.value='What are you looking for?';}">
             </form>
         </div>
     </div>
-    
+
+    <div id="mobileDropdown">
+        <button class="accordion">Accessories</button>
+        <div class="accordionPanel">
+            <div class="accordionLeft">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Belts & Suspenders<br>
+                <input type="checkbox"> Bags & Purses<br>
+                <input type="checkbox"> Gloves & Mittens<br>
+                <input type="checkbox"> Hair & Head<br>
+            </div>
+            <div class="accordionRight">
+                <input type="checkbox"> Hats & Caps<br>
+                <input type="checkbox"> Scarves & Wraps<br>
+                <input type="checkbox"> Suit & Tie<br>
+                <input type="checkbox"> Sunglasses & Eyewear<br>
+                <input type="checkbox"> Umbrella & Rain
+            </div>
+        </div>
+    </div>
+
     <div id="activityContainer">
-        <div id="menu1" class="filterMenu rightMarginLarge link" onclick="addDD(1);">Products</div>
-        <!--<div id="menu4" class="filterMenu link" onclick="addDD(4);">Local</div>-->
+        <div id="menu1" class="filterMenu link" onclick="addDD(1);">Products</div>
         <div id="dd1" class="ddContainer abs">
             <button class="accordion">Accessories</button>
             <div class="accordionPanel">
@@ -120,7 +140,7 @@
                     <input type="checkbox"> Drawing<br>
                     <input type="checkbox"> Dyeing<br>
                     <input type="checkbox"> Painting<br>
-                    <input type="checkbox"> Photography<br>                    
+                    <input type="checkbox"> Photography<br>
                 </div>
             </div>
             <button class="accordion">Entertainment</button>
@@ -170,7 +190,8 @@
                 </div>
             </div>
         </div>
-        <div id="menu2" class="filterMenu rightMarginLarge link" onclick="addDD(2);">Cause</space></div>
+        <div id="menu2" class="filterMenu link" onclick="addDD(2);">Cause</space>
+        </div>
         <div id="dd2" class="ddContainer abs">
             <input type="checkbox"> All<br>
             <input type="checkbox"> Animals<br>
@@ -190,86 +211,45 @@
             <input type="checkbox"> Trafficked Persons<br>
             <input type="checkbox"> Women
         </div>
-        <div id="menu3" class="filterMenu rightMarginLarge link" onclick="addDD(3);">Source</div>
-        <div id="dd3" class="ddContainer abs">            
+        <div id="menu3" class="filterMenu link" onclick="addDD(3);">Source</div>
+        <div id="dd3" class="ddContainer abs">
             <input type="checkbox"> All<br>
             <input type="checkbox"> Fair Trade USA Certified<br>
             <input type="checkbox"> Fair Trade International Certified<br>
             <input type="checkbox"> Green Supply Chain<br>
             <input type="checkbox"> Locally-Made<br>
-        </div>        
+        </div>
     </div>
-    <div id="mainContainer">
-        <div id="selectContainer">
-            <div id="filteredContainer" class="abs">
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
-                <div class="filteredItem halfDiv">
-                    <div class="filteredImage"></div>
-                    <div class="filteredName"></div>
-                </div>
+    <div id="selectContainer">
+        <div id="filteredContainer" class="abs">
+            <div class="filteredItem halfDiv">
+                <div class="filteredImage"></div>
+                <div class="filteredName"></div>
+            </div>
+            <div class="filteredItem halfDiv">
+                <div class="filteredImage"></div>
+                <div class="filteredName"></div>
+            </div>
+            <div class="filteredItem halfDiv">
+                <div class="filteredImage"></div>
+                <div class="filteredName"></div>
+            </div>
+            <div class="filteredItem halfDiv">
+                <div class="filteredImage"></div>
+                <div class="filteredName"></div>
+            </div>
+            <div class="filteredItem halfDiv">
+                <div class="filteredImage"></div>
+                <div class="filteredName"></div>
             </div>
         </div>
-        <div id="popupContainer"></div>
-        <div id="mapContainer" class="right"></div>
+    </div>
+    <div id="popupContainer"></div>
+    <div id="mapContainer" class="mapClass mapNoPopup"></div>
+
+    <div id="mobileToggleContainer">
+        <div id="listDisplay" class="mobileToggleButton" onclick="storeView();">Store List</div>
+        <div id="mapDisplay" class="mobileToggleButton" onclick="mapView()">Map View</div>
     </div>
     <!-- LOAD EXTERNAL JS SCRIPTS -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -278,12 +258,12 @@
 
     <script type="text/javascript">
         function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(40.7, -74.02),
-            zoom: 6,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById("mapContainer"), mapOptions);
+            var mapOptions = {
+                center: new google.maps.LatLng(40.7, -74.02),
+                zoom: 6,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(document.getElementById("mapContainer"), mapOptions);
         }
     </script>
 
