@@ -29,7 +29,7 @@ a {
     position: relative;
 }
 
-@media(min-width: 200px) {
+@media only screen and (min-width: 200px) {
     html {
         font-size: 12px
     }
