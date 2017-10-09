@@ -126,6 +126,32 @@ function checkForPopup() {
 }
 */
 
+document.getElementById("mobileFilterMenu").onclick = function(){
+    var mobileDD = document.getElementById("mobileDropdown");
+    if (mobileDD.style.display == "block")
+        mobileDD.style.display = "none";
+    else mobileDD.style.display = "block";
+}
+
+var accM = document.getElementsByClassName("accordionMobile");
+var aPM = document.getElementsByClassName("accordionPanelMobile");
+
+for (var i = 0; i < accM.length; i++) {
+    accM[i].onclick = function(){
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+
 var acc = document.getElementsByClassName("accordion");
 var aP = document.getElementsByClassName("accordionPanel");
 

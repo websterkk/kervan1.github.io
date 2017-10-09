@@ -313,6 +313,19 @@ a {
     }
     #mobileDropdown {
         position: absolute;
+        left: 10px;
+        top: 90px;
+        width:150px;
+        z-index: 3;
+        display: none;
+    }
+    #mobileCategories {
+        position: absolute;
+        left: 160px;
+        top: 90px;
+        width:150px;
+        z-index: 3;
+        background-color: purple;
         display: block;
     }
     #locationPageSearch {
@@ -451,6 +464,31 @@ a {
     }
     #dd3 {
         left: 40%;
+    }
+    button.filterHeading {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        float: left;
+    }
+    button.accordionMobile {
+        position: relative;
+        left: 40%;
+        top: 0%;
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        display: none;
     }
     button.accordion {
         background-color: #eee;
