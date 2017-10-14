@@ -335,6 +335,7 @@ a {
         left: 40px;
         height: 40px;
         width: calc(100vw - 68px);
+        background-color:aqua;
     }
     #locationTitleBar {
         position: absolute;
@@ -342,6 +343,7 @@ a {
         height: 45px;
         left: 10px;
         display: block;
+        background-color:purple;
     }
     .mapClass {
         background-color: green;
@@ -377,7 +379,7 @@ a {
         right: 0px;
         bottom: 0px;
         background-color: white;
-        opacity: 0.5;
+        opacity: 0.7;
     }
     #locationName {
         font-size: 36px;
@@ -385,12 +387,13 @@ a {
     }
     .searchBarLoc {
         position: relative;
-        top: 8px;
+        top: 0px;
+        height: 100%;
         left: 5px;
         width: calc(100% - 15px);
-        background-color: rgba(255, 255, 255, 0.5);
-        color: rgb(30, 30, 30);
-        font-size: 18px;
+        background-color: rgba(25, 25, 255, 0.5);
+        color: #4d4d4d;
+        font-size: 36px;
         outline: none;
         border: none;
         box-shadow: none;
@@ -408,11 +411,11 @@ a {
         float: left;
         text-align: left;
         padding-top: 9px;
-        border-bottom: 2px black solid;
         font-size: 16px;
+        color: #4d4d4d;
     }
     .filterMenu:hover {
-        background-color: rgba(200, 200, 200, 0.5);
+        color: black;
     }
     #mainContainer {
         position: absolute;
@@ -556,12 +559,12 @@ a {
     }
     .filteredImage {
         width: 100%;
-        height: 80%;
+        height: 85%;
         background-color: goldenrod;
     }
     .filteredName {
         width: 100%;
-        height: 20%;
+        height: 15%;
         background-color: pink;
     }
     .dropdown-content {
@@ -590,7 +593,7 @@ a {
     #locationPageSearch {
         position: relative;
         left: 10px;
-        top: -10px;
+        top: 0px;
         height: calc(100% - 4px);
         width: 300px;
         display: inline-block;
@@ -616,17 +619,18 @@ a {
         top: 60px;
         height: 37px;
         display: block;
+        border-bottom: 2px solid black;
     }
     #selectContainer {
         position: absolute;
         top: 104px;
         left: 10px;
         height: calc(100% - 114px);
-        width: calc(30%);
+        width: calc(60%);
         display: block;
     }
     .filteredItem {
-        height: 16vw;
+        height: 25vw;
         background-color: red;
     }
     #popupContainer {
@@ -653,8 +657,8 @@ a {
         position: absolute;
         top: 104px;
         height: calc(100% - 114px);
-        left: calc(30% + 15px);
-        width: calc(70% - 20px);
+        left: calc(60% + 10px);
+        width: calc(40% - 20px);
     }
 }
 
@@ -663,12 +667,7 @@ a {
         font-size: 20px
     }
     #locationPageSearch {
-        position: relative;
-        left: 10px;
-        top: -10px;
-        height: calc(100% - 4px);
         width: 500px;
-        display: inline-block;
     }
     #locationTitleBar {
         position: absolute;
