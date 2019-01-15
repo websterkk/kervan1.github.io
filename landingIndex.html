@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Westerlies - helping you find good goods.</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="text/javascript" src="https://unpkg.com/vue@2.5.2/dist/vue.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/vee-validate@2.0.0-rc.7/dist/vee-validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+
+</head>
+
+<body>
+
+<header>
+  <h2><a href="#">Westerlies</a></h2>
+  <nav>
+    <li><a href="#about">About</a></li>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="background-image" style="background-image: url(assets/img/map.jpg);"></div>
+  <h1>Coming in 2017</h1>
+  <h3>Helping you find <b style="color: goldenrod">good</b> goods <a class="reviewsLink" href="#reviews">around the corner</a> & across the sea.</h3>
+  <h3>Share your email to find out when we launch:</h3>
+
+  <form>
+			<span style="vertical-align: top">
+					<input name="email" v-validate="'required|email'" v-model="email" type="email"
+                 placeholder="Email">
+					<br/>
+					<span v-show="errors.has('email')" class="help is-danger" v-bind:text-content.prop="errors.first('email') "></span>
+			</span>
+
+    <a v-bind:disabled="errors.has('email')" v-on:click="submit()" class="btn">Subscribe now</a>
+  </form>
+
+  <!--
+  <h4>Until then, shop local and shop handmade using the below list of upcoming craft fairs (and let us know if you have an event you'd like added at: contactwesterlies@gmail.com).</h4>
+  -->
+
+</section>
+
+
+<section id="about" class="our-work">
+  <h3 class="title">About Us</h3>
+  <p class="missionBold">Our mission is to connect you to artisans, vendors, and makers who tell a story with their craft – a story of skill, passion, purpose, history, and culture – and:</p>
+  
+
+  <br>
+    <p>Discover goods that reflect where you are and what you value</p>
+    <hr class="listSeparator">
+    <p>Learn craft by immersing yourself in experiences with skilled craftspeople</p>
+    <hr class="listSeparator">
+    <p>Joining communities of fellow makers and doers who are stringing to make the world a more beautiful and thoughtful place</p>
+  <br>
+  <p class="missionBold">We want to help you invest in artists, goods, experiences, and communities who are doing good with their craft.</p>
+  <hr class="endSection">
+</section>
+
+
+
+<!--
+<section class="features">
+  <h3 class="title">About 2</h3>
+  <p>Another content about what we are doing can go here.</p>
+  <hr>
+
+  <ul class="grid">
+    <li>
+      <i class="fa fa-camera-retro"></i>
+      <h4>Causes</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae
+        pulvinar velit.</p>
+    </li>
+    <li>
+      <i class="fa fa-cubes"></i>
+      <h4>Products</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae
+        pulvinar velit.</p>
+    </li>
+    <li>
+      <i class="fa fa-newspaper-o"></i>
+      <h4>Focus</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae
+        pulvinar velit.</p>
+    </li>
+  </ul>
+</section>
+-->
+
+
+<section id="reviews" class="reviews">
+  <h3 class="title">Upcoming Events</h3>
+
+  <h3 class="smallCity">Baltimore</h3>
+  <table class="eventsTable">
+    <tr>
+      <td class="cityName">Baltimore</td>
+      <td class="fairName">Charm City Craft Mafia</td>
+      <td class="dateCol">Dec 16</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName">Made in Baltimore Pop Up Shop</td>
+      <td class="dateCol">Til Dec 24</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName">Ideal Arts Holiday Popup Market</td>
+      <td class="dateCol">Dec 9, 16</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName">Charm City Holiday Heap</td>
+      <td class="dateCol">Dec 16</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName">Charm City Last Stop Hops Shop</td>
+      <td class="dateCol">Dec 21</td>
+    </tr>
+  </table>
+
+  <h3 class="smallCity">Philadelphia</h3>
+  <table class="eventsTable">
+    <tr>
+      <td class="cityName">Philadelphia</td>
+      <td class="fairName"><a href="">Gifted: A Handmade Holiday Market</a></td>
+      <td class="dateCol">Dec 2-3</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Handmade Holidays & Green Sale</a></td>
+      <td class="dateCol">Dec 2</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Crafty Balboa</a></td>
+      <td class="dateCol">Dec 9</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Go West Craft Fair</a></td>
+      <td class="dateCol">Dec 10</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Last Call Holiday Haul</a></td>
+      <td class="dateCol">Dec 22-23</td>
+    </tr>
+  </table>
+
+  <h3 class="smallCity">New York City</h3>
+  <table class="eventsTable">
+    <tr>
+      <td class="cityName">New York City</td>
+      <td class="fairName"><a href="">Fad Market</a></td>
+      <td class="dateCol">Dec 2-3,9-10,16-17</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Lightfoot Market</a></td>
+      <td class="dateCol">Dec 9-10</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Holiday Shop Up Brooklyn</a></td>
+      <td class="dateCol">Dec 9-10</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Renegade Craft Fair - Brooklyn Pop Up</a></td>
+      <td class="dateCol">Dec 2-3,9-10,16-17</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Canal Street Market</a></td>
+      <td class="dateCol">Ongoing</td>
+    </tr>
+  </table>
+
+  <h3 class="smallCity">Washington DC</h3>
+  <table class="eventsTable">
+    <tr>
+      <td class="cityName">Washington DC</td>
+      <td class="fairName"><a href="">Christkindlmarkt</a></td>
+      <td class="dateCol">Dec 8,15,22</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Brief Assembly</a></td>
+      <td class="dateCol">Til Dec 23</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">Downtown Holiday Market</a></td>
+      <td class="dateCol">Til Dec 23</td>
+    </tr>
+    <tr>
+      <td class="cityName"></td>
+      <td class="fairName"><a href="">GRUMP</a></td>
+      <td class="dateCol">Dec 15-17</td>
+    </tr>
+  </table>
+
+  <table class="eventsTable">
+    <tr>
+      <td class="cityName"></td>
+      <td><a href=""></a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href=""></a></td>
+      <td></td>
+    </tr>
+  </table>
+
+</section>
+
+<!--
+<section id="signup" class="contact">
+  <h3 class="title">Be the first to hear</h3>
+  <p>Share your email to find out when we launch.</p>
+  <hr>
+  <div class="success" v-bind:text-content.prop="message"></div>
+  <div class="is-danger" v-bind:text-content.prop="errorMessage"></div>
+  <form>
+			<span style="vertical-align: top">
+					<input style="min-width: 350px;" name="email" v-validate="'required|email'" v-model="email" type="email"
+                 placeholder="Email">
+					<br/>
+					<span v-show="errors.has('email')" class="help is-danger" v-bind:text-content.prop="errors.first('email') "></span>
+			</span>
+
+    <a v-bind:disabled="errors.has('email')" v-on:click="submit()" class="btn">Subscribe now</a>
+  </form>
+</section>
+
+-->
+
+<footer>
+  <p>
+    Copyright &copy; 2017
+  </p>
+</footer>
+<script src="assets/subscription.js"></script>
+</body>
+</html>
